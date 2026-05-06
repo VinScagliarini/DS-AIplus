@@ -1,0 +1,47 @@
+{
+  "name": "ai-plus-ecosystem-ds",
+  "version": "0.1.0",
+  "description": "Design system dell'umbrella brand AI+ Ecosystem (Logotel S.p.A.) - 9 brand verticali, MuseoModerno + Roboto, gradient diagonale 135°.",
+  "main": "tokens/index.json",
+  "exports": {
+    ".": "./tokens/index.json",
+    "./tokens/*": "./tokens/*.json",
+    "./tokens/brands/*": "./tokens/brands/*.json",
+    "./styles": "./styles/index.css",
+    "./styles/*": "./styles/*",
+    "./tailwind/preset": "./tailwind/preset.js"
+  },
+  "files": [
+    "tokens",
+    "styles",
+    "tailwind",
+    "fonts",
+    "assets",
+    "examples",
+    "docs",
+    "README.md",
+    "CLAUDE.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "tailwind-preset",
+    "logotel",
+    "ai-plus-ecosystem",
+    "creative-studio",
+    "willsell",
+    "jump",
+    "hive",
+    "dojo"
+  ],
+  "scripts": {
+    "build:tokens": "python3 scripts/generate_brand_tokens.py",
+    "build:examples": "python3 scripts/generate_examples.py",
+    "build:docs": "python3 scripts/generate_brand_docs.py",
+    "build": "npm run build:tokens && npm run build:examples && npm run build:docs",
+    "preview": "python3 -m http.server 8000"
+  },
+  "author": "Logotel S.p.A.",
+  "license": "MIT"
+}

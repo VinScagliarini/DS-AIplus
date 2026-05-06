@@ -1,0 +1,15 @@
+:root[data-brand="liveai-plus"], .brand-liveai-plus {
+  /* AI+ Ecosystem brand: LIVE AI+ */
+  --brand-name: "LIVE AI+";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #BBF0AD;
+  --brand-soft:     #BBF0AD;
+  --brand:          #95EC80;
+  --brand-deep:     #52E030;
+  --brand-ink:      #1B331B;
+  --brand-ink-deep: #0E1B0E;
+  --brand-glow:     rgba(149, 236, 128, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #BBF0AD 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #BBF0AD 55%, #95EC80 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #1B331B 0%, #0E1B0E 100%);
+}

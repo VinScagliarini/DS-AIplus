@@ -1,0 +1,63 @@
+{
+  "name": "LEADAI",
+  "slug": "leadai",
+  "tagline": "Lead generation potenziata dall'AI.",
+  "hue": "coral",
+  "color": {
+    "bg": {
+      "start": {
+        "value": "#F7F6F3",
+        "type": "color"
+      },
+      "end": {
+        "value": "#F4ABA6",
+        "type": "color",
+        "description": "Endpoint del gradient diagonale del badge"
+      }
+    },
+    "soft": {
+      "value": "#F4ABA6",
+      "type": "color"
+    },
+    "primary": {
+      "value": "#F2746F",
+      "type": "color",
+      "description": "Colore brand saturato, per accenti e fill"
+    },
+    "deep": {
+      "value": "#EA231B",
+      "type": "color",
+      "description": "Versione piu' scura del primary, per emphasis"
+    },
+    "ink": {
+      "value": "#3A1A1A",
+      "type": "color",
+      "description": "Charcoal con undertone brand, per testo headline su sfondo light"
+    },
+    "ink-deep": {
+      "value": "#181818",
+      "type": "color",
+      "description": "Quasi-nero, per testo body massima leggibilita'"
+    }
+  },
+  "gradient": {
+    "badge": {
+      "value": "linear-gradient(135deg, #F7F6F3 0%, #F4ABA6 100%)",
+      "type": "gradient"
+    },
+    "hero": {
+      "value": "linear-gradient(160deg, #F7F6F3 0%, #F4ABA6 55%, #F2746F 100%)",
+      "type": "gradient"
+    },
+    "ink-card": {
+      "value": "linear-gradient(180deg, #3A1A1A 0%, #181818 100%)",
+      "type": "gradient"
+    }
+  },
+  "shadow": {
+    "glow": {
+      "value": "0 24px 60px -12px rgba(242, 116, 111, 0.35)",
+      "type": "shadow"
+    }
+  }
+}

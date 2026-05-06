@@ -1,0 +1,63 @@
+{
+  "name": "HIVE",
+  "slug": "hive",
+  "tagline": "Network di intelligenze, organizzato.",
+  "hue": "amber",
+  "color": {
+    "bg": {
+      "start": {
+        "value": "#F7F6F3",
+        "type": "color"
+      },
+      "end": {
+        "value": "#FAD08E",
+        "type": "color",
+        "description": "Endpoint del gradient diagonale del badge"
+      }
+    },
+    "soft": {
+      "value": "#FAD08E",
+      "type": "color"
+    },
+    "primary": {
+      "value": "#FDB84B",
+      "type": "color",
+      "description": "Colore brand saturato, per accenti e fill"
+    },
+    "deep": {
+      "value": "#EA9003",
+      "type": "color",
+      "description": "Versione piu' scura del primary, per emphasis"
+    },
+    "ink": {
+      "value": "#3A2E1B",
+      "type": "color",
+      "description": "Charcoal con undertone brand, per testo headline su sfondo light"
+    },
+    "ink-deep": {
+      "value": "#181818",
+      "type": "color",
+      "description": "Quasi-nero, per testo body massima leggibilita'"
+    }
+  },
+  "gradient": {
+    "badge": {
+      "value": "linear-gradient(135deg, #F7F6F3 0%, #FAD08E 100%)",
+      "type": "gradient"
+    },
+    "hero": {
+      "value": "linear-gradient(160deg, #F7F6F3 0%, #FAD08E 55%, #FDB84B 100%)",
+      "type": "gradient"
+    },
+    "ink-card": {
+      "value": "linear-gradient(180deg, #3A2E1B 0%, #181818 100%)",
+      "type": "gradient"
+    }
+  },
+  "shadow": {
+    "glow": {
+      "value": "0 24px 60px -12px rgba(253, 184, 75, 0.35)",
+      "type": "shadow"
+    }
+  }
+}

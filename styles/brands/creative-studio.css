@@ -1,0 +1,15 @@
+:root[data-brand="creative-studio"], .brand-creative-studio {
+  /* AI+ Ecosystem brand: CREATIVE STUDIO */
+  --brand-name: "CREATIVE STUDIO";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #F0BEF7;
+  --brand-soft:     #F0BEF7;
+  --brand:          #D464F0;
+  --brand-deep:     #B916E2;
+  --brand-ink:      #1A0E2A;
+  --brand-ink-deep: #0F0418;
+  --brand-glow:     rgba(212, 100, 240, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #F0BEF7 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #F0BEF7 55%, #D464F0 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #1A0E2A 0%, #0F0418 100%);
+}

@@ -1,0 +1,15 @@
+:root[data-brand="jump"], .brand-jump {
+  /* AI+ Ecosystem brand: JUMP */
+  --brand-name: "JUMP";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #BEF6D3;
+  --brand-soft:     #BEF6D3;
+  --brand:          #56E3B0;
+  --brand-deep:     #1FBE84;
+  --brand-ink:      #31352E;
+  --brand-ink-deep: #181818;
+  --brand-glow:     rgba(86, 227, 176, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #BEF6D3 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #BEF6D3 55%, #56E3B0 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #31352E 0%, #181818 100%);
+}

@@ -1,0 +1,63 @@
+{
+  "name": "DOJO",
+  "slug": "dojo",
+  "tagline": "Allenamento continuo guidato dall'AI.",
+  "hue": "yellow",
+  "color": {
+    "bg": {
+      "start": {
+        "value": "#F7F6F3",
+        "type": "color"
+      },
+      "end": {
+        "value": "#F9E590",
+        "type": "color",
+        "description": "Endpoint del gradient diagonale del badge"
+      }
+    },
+    "soft": {
+      "value": "#F9E590",
+      "type": "color"
+    },
+    "primary": {
+      "value": "#FBD947",
+      "type": "color",
+      "description": "Colore brand saturato, per accenti e fill"
+    },
+    "deep": {
+      "value": "#E1B805",
+      "type": "color",
+      "description": "Versione piu' scura del primary, per emphasis"
+    },
+    "ink": {
+      "value": "#33301A",
+      "type": "color",
+      "description": "Charcoal con undertone brand, per testo headline su sfondo light"
+    },
+    "ink-deep": {
+      "value": "#181818",
+      "type": "color",
+      "description": "Quasi-nero, per testo body massima leggibilita'"
+    }
+  },
+  "gradient": {
+    "badge": {
+      "value": "linear-gradient(135deg, #F7F6F3 0%, #F9E590 100%)",
+      "type": "gradient"
+    },
+    "hero": {
+      "value": "linear-gradient(160deg, #F7F6F3 0%, #F9E590 55%, #FBD947 100%)",
+      "type": "gradient"
+    },
+    "ink-card": {
+      "value": "linear-gradient(180deg, #33301A 0%, #181818 100%)",
+      "type": "gradient"
+    }
+  },
+  "shadow": {
+    "glow": {
+      "value": "0 24px 60px -12px rgba(251, 217, 71, 0.35)",
+      "type": "shadow"
+    }
+  }
+}

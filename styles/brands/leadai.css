@@ -1,0 +1,15 @@
+:root[data-brand="leadai"], .brand-leadai {
+  /* AI+ Ecosystem brand: LEADAI */
+  --brand-name: "LEADAI";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #F4ABA6;
+  --brand-soft:     #F4ABA6;
+  --brand:          #F2746F;
+  --brand-deep:     #EA231B;
+  --brand-ink:      #3A1A1A;
+  --brand-ink-deep: #181818;
+  --brand-glow:     rgba(242, 116, 111, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #F4ABA6 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #F4ABA6 55%, #F2746F 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #3A1A1A 0%, #181818 100%);
+}

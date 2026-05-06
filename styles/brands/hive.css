@@ -1,0 +1,15 @@
+:root[data-brand="hive"], .brand-hive {
+  /* AI+ Ecosystem brand: HIVE */
+  --brand-name: "HIVE";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #FAD08E;
+  --brand-soft:     #FAD08E;
+  --brand:          #FDB84B;
+  --brand-deep:     #EA9003;
+  --brand-ink:      #3A2E1B;
+  --brand-ink-deep: #181818;
+  --brand-glow:     rgba(253, 184, 75, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #FAD08E 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #FAD08E 55%, #FDB84B 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #3A2E1B 0%, #181818 100%);
+}

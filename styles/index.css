@@ -1,0 +1,18 @@
+/* AI+ Ecosystem · entry point unico
+   Importa tokens, tipografia, componenti, e tutti i brand.
+   Per cambiare brand: aggiungi data-brand="creative-studio" sul <html>
+   o usa la classe .brand-creative-studio sul wrapper.
+*/
+@import url("./tokens.css");
+@import url("./typography.css");
+@import url("./components.css");
+
+@import url("./brands/jump.css");
+@import url("./brands/hive.css");
+@import url("./brands/willsell.css");
+@import url("./brands/dojo.css");
+@import url("./brands/creative-studio.css");
+@import url("./brands/maindset.css");
+@import url("./brands/leadai.css");
+@import url("./brands/changelab.css");
+@import url("./brands/liveai-plus.css");

@@ -1,0 +1,63 @@
+{
+  "name": "CHANGELAB",
+  "slug": "changelab",
+  "tagline": "Cambiamento progettato come un esperimento.",
+  "hue": "blue",
+  "color": {
+    "bg": {
+      "start": {
+        "value": "#F7F6F3",
+        "type": "color"
+      },
+      "end": {
+        "value": "#95B5FA",
+        "type": "color",
+        "description": "Endpoint del gradient diagonale del badge"
+      }
+    },
+    "soft": {
+      "value": "#95B5FA",
+      "type": "color"
+    },
+    "primary": {
+      "value": "#568BFF",
+      "type": "color",
+      "description": "Colore brand saturato, per accenti e fill"
+    },
+    "deep": {
+      "value": "#004EF9",
+      "type": "color",
+      "description": "Versione piu' scura del primary, per emphasis"
+    },
+    "ink": {
+      "value": "#0F1B3A",
+      "type": "color",
+      "description": "Charcoal con undertone brand, per testo headline su sfondo light"
+    },
+    "ink-deep": {
+      "value": "#080F22",
+      "type": "color",
+      "description": "Quasi-nero, per testo body massima leggibilita'"
+    }
+  },
+  "gradient": {
+    "badge": {
+      "value": "linear-gradient(135deg, #F7F6F3 0%, #95B5FA 100%)",
+      "type": "gradient"
+    },
+    "hero": {
+      "value": "linear-gradient(160deg, #F7F6F3 0%, #95B5FA 55%, #568BFF 100%)",
+      "type": "gradient"
+    },
+    "ink-card": {
+      "value": "linear-gradient(180deg, #0F1B3A 0%, #080F22 100%)",
+      "type": "gradient"
+    }
+  },
+  "shadow": {
+    "glow": {
+      "value": "0 24px 60px -12px rgba(86, 139, 255, 0.35)",
+      "type": "shadow"
+    }
+  }
+}

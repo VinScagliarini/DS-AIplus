@@ -1,0 +1,15 @@
+:root[data-brand="willsell"], .brand-willsell {
+  /* AI+ Ecosystem brand: WILLSELL */
+  --brand-name: "WILLSELL";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #A6F1F3;
+  --brand-soft:     #A6F1F3;
+  --brand:          #06CBD2;
+  --brand-deep:     #037579;
+  --brand-ink:      #152831;
+  --brand-ink-deep: #181818;
+  --brand-glow:     rgba(6, 203, 210, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #A6F1F3 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #A6F1F3 55%, #06CBD2 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #152831 0%, #181818 100%);
+}

@@ -1,0 +1,15 @@
+:root[data-brand="changelab"], .brand-changelab {
+  /* AI+ Ecosystem brand: CHANGELAB */
+  --brand-name: "CHANGELAB";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #95B5FA;
+  --brand-soft:     #95B5FA;
+  --brand:          #568BFF;
+  --brand-deep:     #004EF9;
+  --brand-ink:      #0F1B3A;
+  --brand-ink-deep: #080F22;
+  --brand-glow:     rgba(86, 139, 255, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #95B5FA 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #95B5FA 55%, #568BFF 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #0F1B3A 0%, #080F22 100%);
+}

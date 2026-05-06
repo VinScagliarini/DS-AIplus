@@ -1,0 +1,15 @@
+:root[data-brand="maindset"], .brand-maindset {
+  /* AI+ Ecosystem brand: MAINDSET */
+  --brand-name: "MAINDSET";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #BFB8FA;
+  --brand-soft:     #BFB8FA;
+  --brand:          #968CFF;
+  --brand-deep:     #4230FF;
+  --brand-ink:      #1B1740;
+  --brand-ink-deep: #0E0B2C;
+  --brand-glow:     rgba(150, 140, 255, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #BFB8FA 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #BFB8FA 55%, #968CFF 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #1B1740 0%, #0E0B2C 100%);
+}

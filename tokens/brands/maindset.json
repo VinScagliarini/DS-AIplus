@@ -1,0 +1,63 @@
+{
+  "name": "MAINDSET",
+  "slug": "maindset",
+  "tagline": "Il mindset operativo di chi adotta l'AI.",
+  "hue": "violet",
+  "color": {
+    "bg": {
+      "start": {
+        "value": "#F7F6F3",
+        "type": "color"
+      },
+      "end": {
+        "value": "#BFB8FA",
+        "type": "color",
+        "description": "Endpoint del gradient diagonale del badge"
+      }
+    },
+    "soft": {
+      "value": "#BFB8FA",
+      "type": "color"
+    },
+    "primary": {
+      "value": "#968CFF",
+      "type": "color",
+      "description": "Colore brand saturato, per accenti e fill"
+    },
+    "deep": {
+      "value": "#4230FF",
+      "type": "color",
+      "description": "Versione piu' scura del primary, per emphasis"
+    },
+    "ink": {
+      "value": "#1B1740",
+      "type": "color",
+      "description": "Charcoal con undertone brand, per testo headline su sfondo light"
+    },
+    "ink-deep": {
+      "value": "#0E0B2C",
+      "type": "color",
+      "description": "Quasi-nero, per testo body massima leggibilita'"
+    }
+  },
+  "gradient": {
+    "badge": {
+      "value": "linear-gradient(135deg, #F7F6F3 0%, #BFB8FA 100%)",
+      "type": "gradient"
+    },
+    "hero": {
+      "value": "linear-gradient(160deg, #F7F6F3 0%, #BFB8FA 55%, #968CFF 100%)",
+      "type": "gradient"
+    },
+    "ink-card": {
+      "value": "linear-gradient(180deg, #1B1740 0%, #0E0B2C 100%)",
+      "type": "gradient"
+    }
+  },
+  "shadow": {
+    "glow": {
+      "value": "0 24px 60px -12px rgba(150, 140, 255, 0.35)",
+      "type": "shadow"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/* ================================================================
+   AI+ Ecosystem · tokens condivisi
+   Generated from tokens/ecosystem.json — non editare a mano.
+   ================================================================ */
+:root {
+  /* Neutrali condivisi tra tutti i brand */
+  --ds-cream:     #F7F6F3;
+  --ds-ink:       #0F0418;
+  --ds-ink-soft:  #1A0E2A;
+  --ds-ink-muted: #6B5B7A;
+  --ds-white:     #FFFFFF;
+  --ds-black:     #000000;
+
+  /* Tipografia */
+  --ds-font-display: "MuseoModerno", system-ui, sans-serif;
+  --ds-font-body:    "Roboto", "Myriad Pro", system-ui, sans-serif;
+  --ds-font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+  --ds-fw-light:    300;
+  --ds-fw-regular:  400;
+  --ds-fw-medium:   500;
+  --ds-fw-semibold: 600;
+  --ds-fw-bold:     700;
+
+  --ds-fs-display: clamp(3rem, 6vw + 1rem, 6.5rem);
+  --ds-fs-h1:      clamp(2.25rem, 3.5vw + 1rem, 4rem);
+  --ds-fs-h2:      clamp(1.75rem, 2vw + 1rem, 2.75rem);
+  --ds-fs-h3:      clamp(1.25rem, 1vw + 1rem, 1.75rem);
+  --ds-fs-body:    1rem;
+  --ds-fs-small:   0.875rem;
+  --ds-fs-caption: 0.75rem;
+
+  --ds-lh-tight:   1.0;
+  --ds-lh-snug:    1.15;
+  --ds-lh-normal:  1.45;
+  --ds-lh-relaxed: 1.65;
+
+  --ds-tracking-display: -0.02em;
+  --ds-tracking-body:    0;
+  --ds-tracking-label:   0.08em;
+
+  /* Forme */
+  --ds-radius-card:   1.75rem;
+  --ds-radius-pill:   9999px;
+  --ds-radius-swatch: 1.25rem;
+  --ds-radius-button: 9999px;
+
+  /* Spacing scale */
+  --ds-space-xs:  0.25rem;
+  --ds-space-sm:  0.5rem;
+  --ds-space-md:  1rem;
+  --ds-space-lg:  1.5rem;
+  --ds-space-xl:  2.5rem;
+  --ds-space-2xl: 4rem;
+  --ds-space-3xl: 6rem;
+
+  /* Shadow di sistema */
+  --ds-shadow-card-soft: 0 6px 24px -8px rgba(15, 4, 24, 0.12), 0 2px 6px -2px rgba(15, 4, 24, 0.06);
+
+  /* Default brand fallback (Creative Studio) - viene overridato da .brand-* */
+  --brand-name:           "AI+";
+  --brand-bg-start:       #F7F6F3;
+  --brand-bg-end:         #F0BEF7;
+  --brand-soft:           #F0BEF7;
+  --brand:                #D464F0;
+  --brand-deep:           #B331E0;
+  --brand-ink:            #1A0E2A;
+  --brand-ink-deep:       #0F0418;
+  --brand-glow:           rgba(212, 100, 240, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #F0BEF7 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #F0BEF7 55%, #D464F0 100%);
+}

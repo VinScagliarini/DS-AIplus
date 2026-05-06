@@ -1,0 +1,204 @@
+/* ================================================================
+   AI+ Ecosystem · component primitives
+   Componenti vanilla CSS che si adattano automaticamente al brand
+   tramite le custom properties --brand-*.
+   ================================================================ */
+
+/* ----- BRAND BADGE -------------------------------------------------
+   Replica del badge AI+ con gradient diagonale e wordmark.
+*/
+.ds-badge {
+  position: relative;
+  width: 18rem;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--ds-radius-card);
+  background: var(--brand-gradient-badge);
+  box-shadow: var(--ds-shadow-card-soft);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  isolation: isolate;
+  overflow: hidden;
+}
+.ds-badge__wordmark {
+  align-self: end;
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-medium);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--brand-ink-deep);
+  letter-spacing: var(--ds-tracking-display);
+}
+.ds-badge__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-family: var(--ds-font-display);
+  font-size: 0.875rem;
+  color: var(--brand-ink-deep);
+}
+.ds-badge__ai-mark {
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: 0.02em;
+}
+.ds-badge__ai-mark sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+.ds-badge__powered {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: var(--ds-font-body);
+  font-size: 0.7rem;
+  line-height: 1.1;
+  font-weight: var(--ds-fw-regular);
+}
+.ds-badge__powered span:last-child {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-medium);
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+/* ----- HERO --------------------------------------------------------
+   Layout pieno-schermo con gradient hero brand-aware.
+*/
+.ds-hero {
+  min-height: 80vh;
+  display: grid;
+  align-content: center;
+  padding: clamp(2rem, 6vw, 6rem);
+  background: var(--brand-gradient-hero);
+  color: var(--brand-ink-deep);
+  border-radius: var(--ds-radius-card);
+}
+.ds-hero__eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+  font-weight: var(--ds-fw-medium);
+  letter-spacing: var(--ds-tracking-label);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+.ds-hero__title {
+  font-family: var(--ds-font-display);
+  font-size: var(--ds-fs-display);
+  font-weight: var(--ds-fw-medium);
+  line-height: var(--ds-lh-tight);
+  letter-spacing: var(--ds-tracking-display);
+  text-transform: uppercase;
+  max-width: 18ch;
+}
+.ds-hero__sub {
+  font-family: var(--ds-font-body);
+  font-size: clamp(1.05rem, 1vw + 0.6rem, 1.25rem);
+  line-height: var(--ds-lh-normal);
+  margin-top: 1.5rem;
+  max-width: 50ch;
+  opacity: 0.85;
+}
+
+/* ----- INK CARD (dark surface) ------------------------------------
+   La card "creative studio" nera con testo bianco — usata come
+   call-to-attention sopra background light.
+*/
+.ds-ink-card {
+  background: var(--brand-gradient-ink-card);
+  color: var(--ds-white);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--ds-radius-card);
+  box-shadow: var(--ds-shadow-card-soft);
+}
+
+/* ----- PILL BUTTON -------------------------------------------------
+   I bottoni mostrati nelle brand sheet: pill rounded con gradient.
+*/
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ds-radius-button);
+  background: var(--brand);
+  color: var(--brand-ink-deep);
+  font-family: var(--ds-font-body);
+  font-weight: var(--ds-fw-medium);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  border: none;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  text-decoration: none;
+}
+.ds-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--brand-gradient-hero);
+  box-shadow: 0 12px 24px -8px var(--brand-glow);
+}
+.ds-button--soft {
+  background: var(--brand-soft);
+  color: var(--brand-ink-deep);
+}
+.ds-button--ghost {
+  background: transparent;
+  color: var(--brand-ink-deep);
+  border: 1.5px solid var(--brand-ink-deep);
+}
+
+/* ----- STAT BLOCK --------------------------------------------------
+   Numero gigante + label, layout statistico tipo brand-sheet.
+*/
+.ds-stat {
+  display: grid;
+  gap: 0.5rem;
+}
+.ds-stat__number {
+  font-family: var(--ds-font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: var(--ds-fw-medium);
+  line-height: 1;
+  color: var(--brand-ink-deep);
+}
+.ds-stat__label {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+  color: var(--ds-ink-muted);
+  max-width: 22ch;
+}
+
+/* ----- SWATCH GRID -------------------------------------------------
+   Visualizzazione palette brand a 5 step.
+*/
+.ds-swatches {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  border-radius: var(--ds-radius-swatch);
+  overflow: hidden;
+  height: 22rem;
+}
+.ds-swatch {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-family: var(--ds-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* ----- ECOSYSTEM GRID ---------------------------------------------
+   Griglia 9-up dei badge brand, come pagina 3 del pacchetto.
+*/
+.ds-ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background: var(--ds-cream);
+}
+.ds-ecosystem-grid .ds-badge {
+  width: 100%;
+}

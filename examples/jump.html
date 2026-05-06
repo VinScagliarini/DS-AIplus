@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="it" data-brand="jump">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI+ JUMP · Logotel</title>
+<meta name="description" content="JUMP raccoglie ciò che il tuo team sa, lo organizza, lo porta nel flusso di lavoro. Senza interrompere nessuno." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300..700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/index.css" />
+<style>
+  body {
+    font-family: var(--ds-font-body);
+    margin: 0;
+    background: var(--ds-cream);
+    color: var(--brand-ink-deep);
+  }
+  .ds-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .ds-eco-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: var(--ds-cream);
+    border-radius: var(--ds-radius-pill);
+    box-shadow: var(--ds-shadow-card-soft);
+    align-items: center;
+    justify-content: center;
+  }
+  .ds-eco-nav__home {
+    font-family: var(--ds-font-display);
+    font-weight: 600;
+    color: var(--ds-ink);
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+  }
+  .ds-eco-nav__link {
+    font-family: var(--ds-font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ds-ink-muted);
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    transition: background 120ms ease, color 120ms ease;
+  }
+  .ds-eco-nav__link:hover { color: var(--brand-ink-deep); }
+  .ds-eco-nav__link[data-active="1"] {
+    background: var(--brand);
+    color: var(--brand-ink-deep);
+  }
+  .ds-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    align-items: stretch;
+  }
+  .ds-section-title {
+    font-family: var(--ds-font-display);
+    font-size: var(--ds-fs-h3);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ds-ink-muted);
+    margin: 0 0 0.75rem;
+  }
+  .ds-card-light {
+    background: var(--ds-white);
+    border-radius: var(--ds-radius-card);
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    box-shadow: var(--ds-shadow-card-soft);
+  }
+  .ds-typespec h2 { margin: 0; font-family: var(--ds-font-display); font-size: 4rem; line-height: 1; color: var(--brand-ink-deep); }
+  .ds-typespec p  { margin: 1rem 0 0; max-width: 60ch; line-height: 1.6; color: var(--ds-ink); }
+  .ds-footer {
+    text-align: center;
+    color: var(--ds-ink-muted);
+    font-size: 0.8rem;
+    padding: 2rem 0 3rem;
+  }
+</style>
+</head>
+<body>
+<div class="ds-shell">
+
+  <nav class="ds-eco-nav" aria-label="AI+ Ecosystem">
+    <a class="ds-eco-nav__home" href="./index.html">AI+ Ecosystem</a>
+    <a href="./jump.html" class="ds-eco-nav__link" data-active="1">JUMP</a>
+      <a href="./hive.html" class="ds-eco-nav__link" data-active="0">HIVE</a>
+      <a href="./willsell.html" class="ds-eco-nav__link" data-active="0">WILLSELL</a>
+      <a href="./dojo.html" class="ds-eco-nav__link" data-active="0">DOJO</a>
+      <a href="./creative-studio.html" class="ds-eco-nav__link" data-active="0">CREATIVE STUDIO</a>
+      <a href="./maindset.html" class="ds-eco-nav__link" data-active="0">MAINDSET</a>
+      <a href="./leadai.html" class="ds-eco-nav__link" data-active="0">LEADAI</a>
+      <a href="./changelab.html" class="ds-eco-nav__link" data-active="0">CHANGELAB</a>
+      <a href="./liveai-plus.html" class="ds-eco-nav__link" data-active="0">LIVE AI+</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="ds-hero">
+    <div class="ds-hero__eyebrow">Activation enablement · powered by Logotel</div>
+    <h1 class="ds-hero__title">Trasforma la tua attività in conoscenza azionabile.</h1>
+    <p class="ds-hero__sub">JUMP raccoglie ciò che il tuo team sa, lo organizza, lo porta nel flusso di lavoro. Senza interrompere nessuno.</p>
+    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="#" class="ds-button">Scopri JUMP</a>
+      <a href="#" class="ds-button ds-button--ghost">Scopri il metodo</a>
+    </div>
+  </header>
+
+  <!-- BADGE + STAT -->
+  <section class="ds-grid-2">
+    <div class="ds-card-light" style="display:grid; place-items:center;">
+      <div class="ds-section-title">Brand badge</div>
+      <div class="ds-badge">
+        <div class="ds-badge__wordmark">JUMP</div>
+        <div class="ds-badge__footer">
+          <div class="ds-badge__ai-mark">AI<sup>+</sup></div>
+          <div class="ds-badge__powered">
+            <span>powered by</span>
+            <span>logotel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-card-light">
+      <div class="ds-section-title">Stat hero</div>
+      <div class="ds-stat">
+        <div class="ds-stat__number">87%</div>
+        <div class="ds-stat__label">delle aziende ammette che la propria conoscenza non è azionabile</div>
+      </div>
+      <hr style="margin: 1.5rem 0; border: none; height: 1px; background: rgba(15,4,24,0.08);" />
+      <div class="ds-section-title">Ink card</div>
+      <div class="ds-ink-card">
+        <div style="font-family: var(--ds-font-display); font-size: 1.6rem; line-height: 1.1; text-transform: uppercase; letter-spacing: -0.01em;">
+          JUMP
+        </div>
+        <p style="margin: 1rem 0 1.5rem; opacity: 0.8;">JUMP raccoglie ciò che il tuo team sa, lo organizza, lo porta nel flusso di lavoro. Senza interrompere nessuno.</p>
+        <a href="#" class="ds-button ds-button--soft">Scopri JUMP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPESPEC + PALETTE -->
+  <section class="ds-grid-2">
+    <div class="ds-card-light ds-typespec">
+      <div class="ds-section-title">Type specimen</div>
+      <h2>aAkK <span style="color: var(--brand)">aAkK</span></h2>
+      <p style="font-family: var(--ds-font-display); font-size: 1.25rem; line-height: 1.4;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789
+      </p>
+      <p>
+        <strong style="font-family: var(--ds-font-display);">MuseoModerno</strong> per headlines.
+        <strong>Roboto</strong> per sub heads e paragrafi. Il display imposta la voce
+        del brand, il body porta il carico di lettura.
+      </p>
+    </div>
+
+    <div class="ds-card-light">
+      <div class="ds-section-title">Palette</div>
+      <div class="ds-swatches">
+        <div class="ds-swatch" style="background: var(--ds-cream); color: var(--ds-ink);">#BEF6D3</div>
+        <div class="ds-swatch" style="background: var(--brand-soft); color: var(--ds-ink);">#BEF6D3</div>
+        <div class="ds-swatch" style="background: var(--brand); color: var(--ds-ink);">#56E3B0</div>
+        <div class="ds-swatch" style="background: var(--brand-ink); color: var(--ds-white);">brand-ink</div>
+        <div class="ds-swatch" style="background: var(--brand-ink-deep); color: var(--ds-white);">brand-ink-deep</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ds-footer">
+    AI+ Ecosystem · JUMP — design system di Logotel S.p.A.<br>
+    powered by logotel · MuseoModerno + Roboto
+  </footer>
+
+</div>
+</body>
+</html>

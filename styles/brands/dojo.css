@@ -1,0 +1,15 @@
+:root[data-brand="dojo"], .brand-dojo {
+  /* AI+ Ecosystem brand: DOJO */
+  --brand-name: "DOJO";
+  --brand-bg-start: #F7F6F3;
+  --brand-bg-end:   #F9E590;
+  --brand-soft:     #F9E590;
+  --brand:          #FBD947;
+  --brand-deep:     #E1B805;
+  --brand-ink:      #33301A;
+  --brand-ink-deep: #181818;
+  --brand-glow:     rgba(251, 217, 71, 0.35);
+  --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #F9E590 100%);
+  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #F9E590 55%, #FBD947 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #33301A 0%, #181818 100%);
+}

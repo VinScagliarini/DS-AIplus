@@ -1,0 +1,103 @@
+{
+  "brands": [
+    {
+      "slug": "jump",
+      "name": "JUMP",
+      "tagline": "Trasforma l'attività in conoscenza azionabile.",
+      "primary": "#56E3B0",
+      "soft": "#BEF6D3",
+      "tokens": "tokens/brands/jump.json",
+      "css": "styles/brands/jump.css",
+      "badge": "assets/badges/jump.png",
+      "glass": "assets/glass-logos/jump.png"
+    },
+    {
+      "slug": "hive",
+      "name": "HIVE",
+      "tagline": "Network di intelligenze, organizzato.",
+      "primary": "#FDB84B",
+      "soft": "#FAD08E",
+      "tokens": "tokens/brands/hive.json",
+      "css": "styles/brands/hive.css",
+      "badge": "assets/badges/hive.png",
+      "glass": "assets/glass-logos/hive.png"
+    },
+    {
+      "slug": "willsell",
+      "name": "WILLSELL",
+      "tagline": "Coach AI per venditori.",
+      "primary": "#06CBD2",
+      "soft": "#A6F1F3",
+      "tokens": "tokens/brands/willsell.json",
+      "css": "styles/brands/willsell.css",
+      "badge": "assets/badges/willsell.png",
+      "glass": "assets/glass-logos/willsell.png"
+    },
+    {
+      "slug": "dojo",
+      "name": "DOJO",
+      "tagline": "Allenamento continuo guidato dall'AI.",
+      "primary": "#FBD947",
+      "soft": "#F9E590",
+      "tokens": "tokens/brands/dojo.json",
+      "css": "styles/brands/dojo.css",
+      "badge": "assets/badges/dojo.png",
+      "glass": "assets/glass-logos/dojo.png"
+    },
+    {
+      "slug": "creative-studio",
+      "name": "CREATIVE STUDIO",
+      "tagline": "Creatività alla velocità degli algoritmi.",
+      "primary": "#D464F0",
+      "soft": "#F0BEF7",
+      "tokens": "tokens/brands/creative-studio.json",
+      "css": "styles/brands/creative-studio.css",
+      "badge": "assets/badges/creative-studio.png",
+      "glass": "assets/glass-logos/creative-studio.png"
+    },
+    {
+      "slug": "maindset",
+      "name": "MAINDSET",
+      "tagline": "Il mindset operativo di chi adotta l'AI.",
+      "primary": "#968CFF",
+      "soft": "#BFB8FA",
+      "tokens": "tokens/brands/maindset.json",
+      "css": "styles/brands/maindset.css",
+      "badge": "assets/badges/maindset.png",
+      "glass": "assets/glass-logos/maindset.png"
+    },
+    {
+      "slug": "leadai",
+      "name": "LEADAI",
+      "tagline": "Lead generation potenziata dall'AI.",
+      "primary": "#F2746F",
+      "soft": "#F4ABA6",
+      "tokens": "tokens/brands/leadai.json",
+      "css": "styles/brands/leadai.css",
+      "badge": "assets/badges/leadai.png",
+      "glass": "assets/glass-logos/leadai.png"
+    },
+    {
+      "slug": "changelab",
+      "name": "CHANGELAB",
+      "tagline": "Cambiamento progettato come un esperimento.",
+      "primary": "#568BFF",
+      "soft": "#95B5FA",
+      "tokens": "tokens/brands/changelab.json",
+      "css": "styles/brands/changelab.css",
+      "badge": "assets/badges/changelab.png",
+      "glass": "assets/glass-logos/changelab.png"
+    },
+    {
+      "slug": "liveai-plus",
+      "name": "LIVE AI+",
+      "tagline": "Eventi e live experience aumentati dall'AI.",
+      "primary": "#95EC80",
+      "soft": "#BBF0AD",
+      "tokens": "tokens/brands/liveai-plus.json",
+      "css": "styles/brands/liveai-plus.css",
+      "badge": "assets/badges/liveai-plus.png",
+      "glass": "assets/glass-logos/liveai-plus.png"
+    }
+  ]
+}
