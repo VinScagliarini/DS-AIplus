@@ -61,18 +61,52 @@ Tabella valori per brand: `tokens/index.json` e `tokens/brands/<slug>.json`.
 
 Quando ti chiedono "una pagina per <brand>", produci:
 
-1. `<html data-brand="<slug>">` o `<div className="brand-<slug>">` come wrapper.
-2. Hero con `.ds-hero` (gradient brand 160°), `.ds-hero__eyebrow`,
-   `.ds-hero__title` (MuseoModerno uppercase), `.ds-hero__sub`.
-3. Una `.ds-badge` o un asset da `assets/badges/<slug>.png`.
-4. CTA con `.ds-button` (oppure `.ds-button--ghost` per secondaria).
-5. Eventuali `.ds-stat` per mostrare numeri grandi.
-6. Sezioni `.ds-ink-card` quando serve contrasto su fondo light.
+1. `<html data-brand="<slug>">` (oppure `.brand-<slug>` su wrapper).
+2. **Topbar** con `.ds-topbar` (dark navy fissa in alto):
+   - `.ds-topbar__brand` con `<NOME>` + `<sup>AI+</sup>` + tag minore
+   - `.ds-topbar__nav` con `.ds-topbar__cta` (pill cyan brand-soft con bordo nero) + `.ds-topbar__powered` ("powered by logotel")
+3. **Eco rail** sotto la topbar (link a tutti i 9 brand, attivo con `data-active="1"`).
+4. **Hero card** con `.ds-hero-card`:
+   - `.ds-hero-card__eyebrow` (caps tracking-wide)
+   - `.ds-hero-card__title` (MuseoModerno SemiBold uppercase, max 16ch)
+   - `.ds-hero-card__sub` (Roboto)
+   - `.ds-hero-card__pills` con 2-3 `.ds-pill` di status (`--cyan`, `--cream`, `--coral`, `--lime`, `--neutral`, `--brand`)
+5. **Status row** sotto la hero: pill `.ds-pill--coral` "ON AIR" + label uppercase descrittivo.
+6. **Big card** focus modulo principale con `.ds-big-card`:
+   - thumbnail quadrata cyan a sinistra (`.ds-big-card__thumb`)
+   - body con eyebrow code/status, titolo, descrizione
+   - `.ds-button` "Apri prototipo →" sulla destra
+7. **Section header** con `.ds-section-header` (titolo grande + descrizione + count moduli).
+8. **Module grid** con `.ds-module-grid` di `.ds-module-card` (5-9 moduli, code "X1..X9", titolo uppercase, mini-desc, footer "approfondisci").
+9. Eventuali `.ds-stat` per i numeri.
+
+**Pattern fondamentale**: il sistema NON è "hero pieno colorato a tutto schermo".
+È "card cyan rounded grandi su sfondo cream", **edge-to-edge ma con padding**, in
+una composizione editoriale **a strati** (topbar / eco-rail / hero-card / big-card /
+section-header / grid). Imitare il sito reference `willsell-gilt.vercel.app`.
 
 Quando ti chiedono "una pagina umbrella" / "ecosystem map":
 
-- Usa `.ds-ecosystem-grid` con 9 `.ds-badge` brand-specifici, ciascuno
-  dentro `.brand-<slug>`. Fondo `--ds-cream`. Titolo MuseoModerno uppercase.
+- Usa una topbar con `AI+ ECOSYSTEM<sup>9</sup>` e tag "Umbrella brand"
+- Hero card con gradient diverso (mix di 2-3 brand soft) e H1 grande
+- Section header "I 9 brand verticali" + count
+- Grid 9-up di `.ds-badge` brand-specifici, ciascuno dentro `.brand-<slug>`
+- CTA row in basso per linkare il prototipo navigazione
+
+## Sistema di navigazione 2D (capitoli + insight)
+
+C'è un prototipo in `examples/navigation-prototype.html`:
+
+- **Verticale (snap)**: ogni capitolo = una `<section class="chapter">` di `100vh` dentro `.chapters` con `scroll-snap-type: y mandatory`.
+- **Orizzontale (snap)**: dentro ogni capitolo, una `.insights__track` con `scroll-snap-type: x mandatory` per gli insight.
+- **Cover ↔ Insights**: la chapter ha `data-expanded="0|1"`; con `1` la grid passa da `1fr 0fr` a `minmax(28rem, 33vw) 1fr` con curva spring `var(--ds-ease-spring)` e durata `var(--ds-dur-slow)` (720ms).
+- **Rail anteprima**: `.rail` è un floating panel con i titoli degli insight, sempre visibile sul bordo destro della cover (collapsed) e diventa un indice statico quando il chapter è expanded.
+- **Tastiera**: `↑/↓` cambia capitolo, `→` apre / next insight, `←` previous insight / chiude.
+- **WebGL shader**: il `<canvas data-shader="<slug>">` dentro `.cover` ha un fragment shader plasma (FBM noise) che usa `--brand-soft` e `--brand` (in vec3 RGB 0..1, lookup in `SHADER_BRANDS`). Si disabilita con `prefers-reduced-motion: reduce`.
+
+Per produzione, la stessa logica andrebbe portata in **GSAP + ScrollTrigger** (per
+controllare timeline, parallax e linked animations) e **Three.js / react-three-fiber**
+per shader piu' avanzati (bloom, distortion, glass, mesh).
 
 ## File chiave
 

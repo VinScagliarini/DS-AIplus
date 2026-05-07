@@ -1,12 +1,438 @@
 /* ================================================================
    AI+ Ecosystem · component primitives
-   Componenti vanilla CSS che si adattano automaticamente al brand
-   tramite le custom properties --brand-*.
+   Allineati al sito di reference (willsell-gilt.vercel.app):
+   topbar dark, hero card cyan, pill bordo nero, big-card con thumb,
+   section-header con count, module-grid, ink button.
    ================================================================ */
 
-/* ----- BRAND BADGE -------------------------------------------------
-   Replica del badge AI+ con gradient diagonale e wordmark.
-*/
+/* ====================================================================
+   TOP BAR (dark navy, full-width, presente in tutte le pagine brand)
+   ==================================================================== */
+.ds-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.85rem clamp(1rem, 2.5vw, 2rem);
+  background: var(--ds-ink-navy);
+  color: var(--ds-cream);
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+}
+.ds-topbar__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+}
+.ds-topbar__brand sup {
+  font-size: 0.62em;
+  font-weight: var(--ds-fw-medium);
+  color: var(--brand-soft);
+  margin-left: 0.15em;
+  vertical-align: super;
+}
+.ds-topbar__tag {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+  color: var(--ds-cream);
+  opacity: 0.7;
+  font-weight: var(--ds-fw-regular);
+  margin-left: 0.35rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.ds-topbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+.ds-topbar__powered {
+  font-family: var(--ds-font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ds-cream);
+  opacity: 0.55;
+  text-transform: lowercase;
+}
+
+/* ====================================================================
+   PILL (bordo nero, dot, varianti colore)
+   ==================================================================== */
+.ds-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: var(--ds-radius-pill);
+  border: 1.5px solid var(--ds-ink-deep);
+  background: var(--ds-cream);
+  color: var(--ds-ink-deep);
+  font-family: var(--ds-font-body);
+  font-size: 0.78rem;
+  font-weight: var(--ds-fw-medium);
+  white-space: nowrap;
+}
+.ds-pill__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--ds-ink-deep);
+  flex: none;
+}
+.ds-pill--cyan       { background: #A6F1F3; }
+.ds-pill--cyan .ds-pill__dot      { background: #06CBD2; }
+.ds-pill--coral      { background: #FF7A6E; color: var(--ds-ink-deep); }
+.ds-pill--coral .ds-pill__dot     { background: #B23A30; }
+.ds-pill--cream      { background: var(--ds-pill-cream); }
+.ds-pill--cream .ds-pill__dot     { background: #B23A30; }
+.ds-pill--lime       { background: #BBF0AD; }
+.ds-pill--lime .ds-pill__dot      { background: #4FA13F; }
+.ds-pill--neutral    { background: #ECEEF0; }
+.ds-pill--neutral .ds-pill__dot   { background: #6B7A82; }
+.ds-pill--ghost      {
+  background: transparent;
+  color: var(--ds-cream);
+  border-color: rgba(247, 246, 243, 0.55);
+}
+.ds-pill--ghost .ds-pill__dot     { background: var(--ds-cream); }
+.ds-pill--brand      { background: var(--brand-soft); }
+.ds-pill--brand .ds-pill__dot     { background: var(--brand); }
+
+/* Topbar pill button (bg cyan brand-soft, label uppercase, icon) */
+.ds-topbar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--ds-radius-pill);
+  border: 1.5px solid var(--ds-ink-deep);
+  background: var(--brand-soft);
+  color: var(--ds-ink-deep);
+  font-family: var(--ds-font-body);
+  font-size: 0.75rem;
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard),
+              box-shadow var(--ds-dur-fast) var(--ds-ease-standard);
+}
+.ds-topbar__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -4px var(--brand-glow);
+}
+
+/* ====================================================================
+   EYEBROW (caps tracking-wide, prima della headline)
+   ==================================================================== */
+.ds-eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-eyebrow);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-muted);
+}
+.ds-eyebrow--ink   { color: var(--ds-ink-deep); }
+.ds-eyebrow--brand { color: var(--brand-deep); }
+
+/* ====================================================================
+   HERO CARD (rounded cyan card con gradient, padding generoso)
+   ==================================================================== */
+.ds-hero-card {
+  position: relative;
+  border-radius: var(--ds-radius-card);
+  background: var(--brand-gradient-hero);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  color: var(--ds-ink-deep);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ds-hero-card__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-eyebrow);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+}
+.ds-hero-card__title {
+  font-family: var(--ds-font-display);
+  font-size: var(--ds-fs-display);
+  font-weight: var(--ds-fw-semibold);
+  line-height: var(--ds-lh-snug);
+  letter-spacing: var(--ds-tracking-display);
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 16ch;
+}
+.ds-hero-card__sub {
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  line-height: var(--ds-lh-relaxed);
+  margin: 1.25rem 0 1.75rem;
+  max-width: 60ch;
+  color: var(--ds-ink);
+}
+.ds-hero-card__pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* ====================================================================
+   BIG CARD (cyan rounded card con thumbnail icon a sx + button a dx)
+   ==================================================================== */
+.ds-big-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+  border-radius: var(--ds-radius-card);
+  background: var(--brand-gradient-hero);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: var(--ds-ink-deep);
+}
+.ds-big-card__thumb {
+  width: clamp(4.5rem, 8vw, 6rem);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--ds-radius-thumb);
+  background: var(--brand);
+  display: grid;
+  place-items: center;
+  color: var(--ds-ink-deep);
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 1.5rem;
+}
+.ds-big-card__body {
+  display: grid;
+  gap: 0.4rem;
+}
+.ds-big-card__eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-eyebrow);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.ds-big-card__title {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.ds-big-card__desc {
+  font-family: var(--ds-font-body);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 50ch;
+  color: var(--ds-ink);
+}
+
+/* ====================================================================
+   SECTION HEADER (titolo grande sx + descrizione+count dx, separator)
+   ==================================================================== */
+.ds-section-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: end;
+  gap: 1.5rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--ds-line);
+  margin: 2.5rem 0 1.75rem;
+}
+.ds-section-header__title {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ds-ink-deep);
+}
+.ds-section-header__desc {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+  line-height: 1.4;
+  color: var(--ds-ink-muted);
+  text-align: right;
+  max-width: 60ch;
+  margin-left: auto;
+}
+.ds-section-header__count {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 0.85rem;
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+  white-space: nowrap;
+}
+
+/* ====================================================================
+   MODULE GRID + MODULE CARD
+   ==================================================================== */
+.ds-module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.5rem;
+}
+.ds-module-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: var(--ds-radius-module);
+  background: var(--ds-paper);
+  border: 1px solid var(--ds-line);
+  color: var(--ds-ink-deep);
+  text-decoration: none;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard),
+              border-color var(--ds-dur-fast) var(--ds-ease-standard),
+              box-shadow var(--ds-dur-normal) var(--ds-ease-standard);
+}
+.ds-module-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+  box-shadow: 0 12px 28px -10px var(--brand-glow);
+}
+.ds-module-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ds-font-body);
+  font-size: 0.7rem;
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-muted);
+}
+.ds-module-card__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  color: var(--brand-deep);
+}
+.ds-module-card__title {
+  font-family: var(--ds-font-display);
+  font-size: 1rem;
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.ds-module-card__desc {
+  font-family: var(--ds-font-body);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--ds-ink);
+  margin: 0;
+}
+.ds-module-card__footer {
+  margin-top: 0.5rem;
+  font-family: var(--ds-font-body);
+  font-size: 0.68rem;
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ds-ink-muted);
+}
+
+/* ====================================================================
+   BUTTONS (ink scuro per CTA primaria, ghost, soft)
+   ==================================================================== */
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--ds-radius-button);
+  border: 1.5px solid var(--ds-ink-deep);
+  background: var(--ds-ink-deep);
+  color: var(--ds-cream);
+  font-family: var(--ds-font-body);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard),
+              box-shadow var(--ds-dur-fast) var(--ds-ease-standard);
+  white-space: nowrap;
+}
+.ds-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px -8px rgba(14,27,34,0.35);
+}
+.ds-button--soft {
+  background: var(--brand-soft);
+  color: var(--ds-ink-deep);
+  border-color: var(--ds-ink-deep);
+}
+.ds-button--ghost {
+  background: transparent;
+  color: var(--ds-ink-deep);
+  border-color: var(--ds-ink-deep);
+}
+.ds-button--brand {
+  background: var(--brand);
+  color: var(--ds-ink-deep);
+  border-color: var(--ds-ink-deep);
+}
+.ds-button__arrow {
+  display: inline-block;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard);
+}
+.ds-button:hover .ds-button__arrow { transform: translateX(2px); }
+
+/* ====================================================================
+   STAT (numero gigante + label)
+   ==================================================================== */
+.ds-stat { display: grid; gap: 0.35rem; }
+.ds-stat__number {
+  font-family: var(--ds-font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1;
+  color: var(--ds-ink-deep);
+}
+.ds-stat__label {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-small);
+  color: var(--ds-ink-muted);
+  max-width: 22ch;
+  line-height: 1.4;
+}
+
+/* ====================================================================
+   BRAND BADGE (lasciato per index ecosystem)
+   ==================================================================== */
 .ds-badge {
   position: relative;
   width: 18rem;
@@ -17,17 +443,15 @@
   padding: 1.5rem;
   display: grid;
   grid-template-rows: 1fr auto;
-  isolation: isolate;
-  overflow: hidden;
 }
 .ds-badge__wordmark {
   align-self: end;
   font-family: var(--ds-font-display);
-  font-weight: var(--ds-fw-medium);
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: var(--ds-fw-semibold);
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
   line-height: 0.95;
   text-transform: uppercase;
-  color: var(--brand-ink-deep);
+  color: var(--ds-ink-deep);
   letter-spacing: var(--ds-tracking-display);
 }
 .ds-badge__footer {
@@ -35,23 +459,15 @@
   justify-content: space-between;
   align-items: end;
   font-family: var(--ds-font-display);
-  font-size: 0.875rem;
-  color: var(--brand-ink-deep);
-}
-.ds-badge__ai-mark {
-  font-weight: var(--ds-fw-semibold);
-  letter-spacing: 0.02em;
-}
-.ds-badge__ai-mark sup {
-  font-size: 0.7em;
-  vertical-align: super;
+  font-size: 0.85rem;
+  color: var(--ds-ink-deep);
 }
 .ds-badge__powered {
   display: flex;
   flex-direction: column;
   align-items: end;
   font-family: var(--ds-font-body);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   line-height: 1.1;
   font-weight: var(--ds-fw-regular);
 }
@@ -63,142 +479,11 @@
   letter-spacing: -0.01em;
 }
 
-/* ----- HERO --------------------------------------------------------
-   Layout pieno-schermo con gradient hero brand-aware.
-*/
-.ds-hero {
-  min-height: 80vh;
-  display: grid;
-  align-content: center;
-  padding: clamp(2rem, 6vw, 6rem);
-  background: var(--brand-gradient-hero);
-  color: var(--brand-ink-deep);
-  border-radius: var(--ds-radius-card);
-}
-.ds-hero__eyebrow {
-  font-family: var(--ds-font-body);
-  font-size: var(--ds-fs-small);
-  font-weight: var(--ds-fw-medium);
-  letter-spacing: var(--ds-tracking-label);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  opacity: 0.7;
-}
-.ds-hero__title {
-  font-family: var(--ds-font-display);
-  font-size: var(--ds-fs-display);
-  font-weight: var(--ds-fw-medium);
-  line-height: var(--ds-lh-tight);
-  letter-spacing: var(--ds-tracking-display);
-  text-transform: uppercase;
-  max-width: 18ch;
-}
-.ds-hero__sub {
-  font-family: var(--ds-font-body);
-  font-size: clamp(1.05rem, 1vw + 0.6rem, 1.25rem);
-  line-height: var(--ds-lh-normal);
-  margin-top: 1.5rem;
-  max-width: 50ch;
-  opacity: 0.85;
-}
-
-/* ----- INK CARD (dark surface) ------------------------------------
-   La card "creative studio" nera con testo bianco — usata come
-   call-to-attention sopra background light.
-*/
-.ds-ink-card {
-  background: var(--brand-gradient-ink-card);
-  color: var(--ds-white);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-radius: var(--ds-radius-card);
-  box-shadow: var(--ds-shadow-card-soft);
-}
-
-/* ----- PILL BUTTON -------------------------------------------------
-   I bottoni mostrati nelle brand sheet: pill rounded con gradient.
-*/
-.ds-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--ds-radius-button);
-  background: var(--brand);
-  color: var(--brand-ink-deep);
-  font-family: var(--ds-font-body);
-  font-weight: var(--ds-fw-medium);
-  font-size: 0.95rem;
-  letter-spacing: 0;
-  border: none;
-  cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease;
-  text-decoration: none;
-}
-.ds-button:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--brand-gradient-hero);
-  box-shadow: 0 12px 24px -8px var(--brand-glow);
-}
-.ds-button--soft {
-  background: var(--brand-soft);
-  color: var(--brand-ink-deep);
-}
-.ds-button--ghost {
-  background: transparent;
-  color: var(--brand-ink-deep);
-  border: 1.5px solid var(--brand-ink-deep);
-}
-
-/* ----- STAT BLOCK --------------------------------------------------
-   Numero gigante + label, layout statistico tipo brand-sheet.
-*/
-.ds-stat {
-  display: grid;
-  gap: 0.5rem;
-}
-.ds-stat__number {
-  font-family: var(--ds-font-display);
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: var(--ds-fw-medium);
-  line-height: 1;
-  color: var(--brand-ink-deep);
-}
-.ds-stat__label {
-  font-family: var(--ds-font-body);
-  font-size: var(--ds-fs-small);
-  color: var(--ds-ink-muted);
-  max-width: 22ch;
-}
-
-/* ----- SWATCH GRID -------------------------------------------------
-   Visualizzazione palette brand a 5 step.
-*/
-.ds-swatches {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  border-radius: var(--ds-radius-swatch);
-  overflow: hidden;
-  height: 22rem;
-}
-.ds-swatch {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  font-family: var(--ds-font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-}
-
-/* ----- ECOSYSTEM GRID ---------------------------------------------
-   Griglia 9-up dei badge brand, come pagina 3 del pacchetto.
-*/
-.ds-ecosystem-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: clamp(1rem, 2vw, 1.5rem);
-  padding: clamp(1.5rem, 3vw, 3rem);
-  background: var(--ds-cream);
-}
-.ds-ecosystem-grid .ds-badge {
-  width: 100%;
+/* ====================================================================
+   SHELL (container e layout)
+   ==================================================================== */
+.ds-shell {
+  max-width: 88rem;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
 }

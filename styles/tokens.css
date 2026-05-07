@@ -1,13 +1,17 @@
 /* ================================================================
    AI+ Ecosystem · tokens condivisi
-   Generated from tokens/ecosystem.json — non editare a mano.
+   Allineati al look del sito di reference (willsell-gilt.vercel.app)
    ================================================================ */
 :root {
   /* Neutrali condivisi tra tutti i brand */
   --ds-cream:     #F7F6F3;
-  --ds-ink:       #0F0418;
-  --ds-ink-soft:  #1A0E2A;
-  --ds-ink-muted: #6B5B7A;
+  --ds-paper:     #FFFFFF;
+  --ds-ink:       #0E1B22;        /* deep navy con tint cool — testo body */
+  --ds-ink-deep:  #07111A;        /* quasi-nero con tint cool */
+  --ds-ink-navy:  #15242B;        /* topbar e dark surfaces */
+  --ds-ink-muted: #6B7A82;        /* gray cool per labels */
+  --ds-line:      rgba(14, 27, 34, 0.10); /* hairline per card grid */
+  --ds-pill-cream: #F5EDD9;       /* pill cream per status */
   --ds-white:     #FFFFFF;
   --ds-black:     #000000;
 
@@ -22,30 +26,33 @@
   --ds-fw-semibold: 600;
   --ds-fw-bold:     700;
 
-  --ds-fs-display: clamp(3rem, 6vw + 1rem, 6.5rem);
+  /* Type scale fluida (clamp) — calibrata sul reference WillSell */
+  --ds-fs-display: clamp(3rem, 5.5vw + 1rem, 5.75rem);   /* H1 hero card */
   --ds-fs-h1:      clamp(2.25rem, 3.5vw + 1rem, 4rem);
   --ds-fs-h2:      clamp(1.75rem, 2vw + 1rem, 2.75rem);
   --ds-fs-h3:      clamp(1.25rem, 1vw + 1rem, 1.75rem);
   --ds-fs-body:    1rem;
   --ds-fs-small:   0.875rem;
   --ds-fs-caption: 0.75rem;
+  --ds-fs-eyebrow: 0.72rem;
 
   --ds-lh-tight:   1.0;
-  --ds-lh-snug:    1.15;
+  --ds-lh-snug:    1.05;       /* hero headline molto compatto */
   --ds-lh-normal:  1.45;
-  --ds-lh-relaxed: 1.65;
+  --ds-lh-relaxed: 1.6;
 
-  --ds-tracking-display: -0.02em;
-  --ds-tracking-body:    0;
+  --ds-tracking-display: -0.015em;
+  --ds-tracking-eyebrow: 0.14em;
   --ds-tracking-label:   0.08em;
 
   /* Forme */
-  --ds-radius-card:   1.75rem;
+  --ds-radius-card:   1.75rem;       /* card grandi (hero, big-card) */
+  --ds-radius-module: 1.25rem;       /* card grid moduli */
   --ds-radius-pill:   9999px;
-  --ds-radius-swatch: 1.25rem;
   --ds-radius-button: 9999px;
+  --ds-radius-thumb:  1rem;          /* mini thumbnail dentro big-card */
 
-  /* Spacing scale */
+  /* Spacing */
   --ds-space-xs:  0.25rem;
   --ds-space-sm:  0.5rem;
   --ds-space-md:  1rem;
@@ -54,10 +61,21 @@
   --ds-space-2xl: 4rem;
   --ds-space-3xl: 6rem;
 
-  /* Shadow di sistema */
-  --ds-shadow-card-soft: 0 6px 24px -8px rgba(15, 4, 24, 0.12), 0 2px 6px -2px rgba(15, 4, 24, 0.06);
+  /* Shadows */
+  --ds-shadow-card-soft:  0 6px 24px -8px rgba(14, 27, 34, 0.10), 0 2px 6px -2px rgba(14, 27, 34, 0.06);
+  --ds-shadow-module:     0 1px 0 rgba(14, 27, 34, 0.06);
+  --ds-shadow-card-glow:  0 24px 60px -12px var(--brand-glow, rgba(0,0,0,0.12));
 
-  /* Default brand fallback (Creative Studio) - viene overridato da .brand-* */
+  /* Motion (le curve "spinta" per le transizioni di navigazione) */
+  --ds-ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);  /* overshoot + soft land */
+  --ds-ease-snap:      cubic-bezier(0.22, 1, 0.36, 1);     /* enter veloce, decelera */
+  --ds-ease-standard:  cubic-bezier(0.4, 0, 0.2, 1);       /* material default */
+  --ds-dur-fast:   180ms;
+  --ds-dur-normal: 320ms;
+  --ds-dur-slow:   720ms;          /* apertura cover→insight */
+  --ds-dur-cinematic: 1100ms;      /* hero entry */
+
+  /* Default brand fallback (Creative Studio) */
   --brand-name:           "AI+";
   --brand-bg-start:       #F7F6F3;
   --brand-bg-end:         #F0BEF7;
@@ -68,5 +86,6 @@
   --brand-ink-deep:       #0F0418;
   --brand-glow:           rgba(212, 100, 240, 0.35);
   --brand-gradient-badge: linear-gradient(135deg, #F7F6F3 0%, #F0BEF7 100%);
-  --brand-gradient-hero:  linear-gradient(160deg, #F7F6F3 0%, #F0BEF7 55%, #D464F0 100%);
+  --brand-gradient-hero:  linear-gradient(135deg, #F7F6F3 0%, var(--brand-soft) 50%, var(--brand) 100%);
+  --brand-gradient-ink-card: linear-gradient(180deg, #1A0E2A 0%, #0F0418 100%);
 }
