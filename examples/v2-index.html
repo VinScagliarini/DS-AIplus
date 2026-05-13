@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI+ Ecosystem · v2 / Brand Expansion — Logotel</title>
-<meta name="description" content="V2 / brand expansion: glass badges, shape 3D, glassmorphic surfaces. Nove brand dell'ecosistema AI+ declinati nel nuovo linguaggio visivo." />
+<meta name="description" content="V2 / brand expansion: 9 glass badge dell'ecosistema AI+ con palette differenziate. Apri ogni vetrina per vedere i moduli." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300..700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
@@ -18,83 +18,66 @@
     color: var(--ds-ink);
     font-family: var(--ds-font-body);
   }
-  .v2-page__hero {
-    margin: clamp(1rem, 2vw, 1.5rem);
-  }
-  .v2-grid {
+  .v2-page__hero { margin: clamp(1rem, 2vw, 1.5rem); }
+  .v2-badges {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: clamp(1rem, 2vw, 1.5rem);
-    margin: clamp(1rem, 2vw, 1.5rem);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+    margin: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    align-items: start;
   }
-  .v2-cell {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    border-radius: var(--ds-radius-card);
-    overflow: hidden;
-    background:
-      radial-gradient(120% 80% at 80% 10%, var(--brand-soft) 0%, transparent 60%),
-      radial-gradient(70% 60% at 10% 100%, color-mix(in srgb, var(--brand) 25%, white) 0%, transparent 60%),
-      var(--ds-cream);
-    box-shadow: var(--ds-shadow-card-soft);
-    isolation: isolate;
+  .v2-badge-cell {
     display: grid;
-    place-items: center;
+    gap: 0.75rem;
+    justify-items: center;
+    text-align: center;
+  }
+  .v2-badge-cell .ds-glass-badge {
+    width: 100%;
+    max-width: 16rem;
+  }
+  .v2-badge-cell__name {
+    font-family: var(--ds-font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
     color: var(--ds-ink-deep);
-    padding: 1.5rem;
+    margin: 0;
   }
-  .v2-cell__floor {
-    position: absolute;
-    left: 50%;
-    bottom: 12%;
-    width: 50%;
-    height: 5%;
-    transform: translateX(-50%);
-    background: radial-gradient(ellipse at center, rgba(15,4,24,0.25) 0%, transparent 70%);
-    filter: blur(8px);
-    z-index: 0;
-  }
-  .v2-cell__label {
-    position: absolute;
-    top: 1rem;
-    left: 1.25rem;
+  .v2-badge-cell__tagline {
     font-family: var(--ds-font-body);
-    font-size: 0.65rem;
+    font-size: 0.78rem;
+    color: var(--ds-ink-muted);
+    margin: 0;
+    max-width: 22ch;
+    line-height: 1.35;
+  }
+  .v2-badge-cell__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--ds-font-body);
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--ds-ink-deep);
-    opacity: 0.55;
-    z-index: 5;
+    text-decoration: none;
+    padding: 0.45rem 0.85rem;
+    border: 1.5px solid var(--ds-ink-deep);
+    border-radius: 999px;
+    transition: background var(--ds-dur-fast) var(--ds-ease-standard), color var(--ds-dur-fast) var(--ds-ease-standard);
   }
-  .v2-cell__tag {
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    font-family: var(--ds-font-body);
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    color: var(--ds-ink);
-    opacity: 0.5;
-    z-index: 5;
-  }
-  .v2-cell .ds-glass-lockup {
-    width: 100%;
-    max-width: 22rem;
-    z-index: 2;
-  }
-  .v2-cell .ds-glass-badge {
-    width: clamp(8rem, 14vw, 11rem);
-  }
-  .v2-cell .ds-glass-shape {
-    width: clamp(10rem, 16vw, 13rem);
+  .v2-badge-cell__cta:hover {
+    background: var(--ds-ink-deep);
+    color: var(--ds-cream);
   }
   .v2-actions {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    margin: 0 clamp(1rem, 2vw, 1.5rem) 3rem;
+    margin: 2rem clamp(1rem, 2vw, 1.5rem) 3rem;
   }
 </style>
 </head>
@@ -112,111 +95,20 @@
   </header>
 
   <section class="v2-page__hero">
-    <article class="ds-glass-hero" data-brand="creative-studio">
+    <article class="ds-glass-hero" data-brand="creative-studio" data-ds-version="2">
       <div class="ds-glass-hero__body">
         <span class="ds-glass-hero__eyebrow">v2 · BRAND EXPANSION</span>
         <h1 class="ds-glass-hero__title">Vetro, profondità, segno.</h1>
         <p class="ds-glass-hero__sub">
-          Una seconda voce del design system AI+ Ecosystem: ogni brand riceve una <strong>forma 3D</strong> distintiva e un badge in vetro liquido. Identità più dimensionale, palette più morbida, stessi token sotto il cofano.
+          Una seconda voce del design system AI+ Ecosystem: ogni brand riceve una <strong>forma 3D</strong> distintiva e un badge in vetro liquido. Ogni vetrina di seguito mostra gli stessi moduli con la palette del proprio brand.
         </p>
         <div class="ds-glass-hero__actions">
-          <a class="ds-glass-button ds-glass-button--brand" href="./v2-creative-studio.html">Vetrina Creative Studio →</a>
+          <a class="ds-glass-button ds-glass-button--brand-gradient" href="./v2-creative-studio.html">Vetrina Creative Studio →</a>
           <a class="ds-glass-button" href="../docs/usage-v2.md">Documentazione v2</a>
         </div>
       </div>
       <div class="ds-glass-hero__media">
-        <div class="ds-glass-lockup">
-          <div class="ds-glass-shape">
-            <svg viewBox="0 0 240 240" aria-label="CREATIVE STUDIO glass shape"><use href="../assets/shapes/sprite.svg#shape-creative-studio"/></svg>
-          </div>
-          <div class="ds-glass-badge">
-            <div class="ds-glass-badge__wordmark">CREATIVE<br/>STUDIO</div>
-            <div class="ds-glass-badge__footer">
-              <span class="ds-glass-badge__aiplus">AI+</span>
-              <span class="ds-glass-badge__powered">
-                <span>powered by</span>
-                <span>logotel</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </section>
-
-  <main class="v2-grid">
-
-    <article class="v2-cell" data-brand="jump">
-      <span class="v2-cell__label">JUMP</span>
-      <span class="v2-cell__tag">Activity → Knowledge</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-jump"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">JUMP</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="v2-cell" data-brand="hive">
-      <span class="v2-cell__label">HIVE</span>
-      <span class="v2-cell__tag">Network</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-hive"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">HIVE</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="v2-cell" data-brand="willsell">
-      <span class="v2-cell__label">WILLSELL</span>
-      <span class="v2-cell__tag">Sales coach</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-willsell"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">WILL<br/>SELL</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="v2-cell" data-brand="dojo">
-      <span class="v2-cell__label">DOJO</span>
-      <span class="v2-cell__tag">Training</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-dojo"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">DOJO</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <article class="v2-cell" data-brand="creative-studio">
-      <span class="v2-cell__label">CREATIVE STUDIO</span>
-      <span class="v2-cell__tag">Creative ops</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-creative-studio"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
+        <div class="ds-glass-badge">
           <div class="ds-glass-badge__wordmark">CREATIVE<br/>STUDIO</div>
           <div class="ds-glass-badge__footer">
             <span class="ds-glass-badge__aiplus">AI+</span>
@@ -225,76 +117,131 @@
         </div>
       </div>
     </article>
+  </section>
 
-    <article class="v2-cell" data-brand="maindset">
-      <span class="v2-cell__label">MAINDSET</span>
-      <span class="v2-cell__tag">Mindset shift</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-maindset"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">MAIND<br/>SET</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
+  <main class="v2-badges">
+
+    <div class="v2-badge-cell" data-brand="jump">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">JUMP</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
         </div>
       </div>
-    </article>
+      <p class="v2-badge-cell__name">JUMP</p>
+      <p class="v2-badge-cell__tagline">Trasforma l'attività in conoscenza azionabile.</p>
+      <a class="v2-badge-cell__cta" href="./v2-jump.html">Apri vetrina →</a>
+    </div>
 
-    <article class="v2-cell" data-brand="leadai">
-      <span class="v2-cell__label">LEADAI</span>
-      <span class="v2-cell__tag">Lead with AI</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-leadai"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">LEAD<br/>AI</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
+    <div class="v2-badge-cell" data-brand="hive">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">HIVE</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
         </div>
       </div>
-    </article>
+      <p class="v2-badge-cell__name">HIVE</p>
+      <p class="v2-badge-cell__tagline">Network di intelligenze, organizzato.</p>
+      <a class="v2-badge-cell__cta" href="./v2-hive.html">Apri vetrina →</a>
+    </div>
 
-    <article class="v2-cell" data-brand="changelab">
-      <span class="v2-cell__label">CHANGELAB</span>
-      <span class="v2-cell__tag">Change ops</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-changelab"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">CHANGE<br/>LAB</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
+    <div class="v2-badge-cell" data-brand="willsell">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">WILL<br/>SELL</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
         </div>
       </div>
-    </article>
+      <p class="v2-badge-cell__name">WILLSELL</p>
+      <p class="v2-badge-cell__tagline">Coach AI per venditori.</p>
+      <a class="v2-badge-cell__cta" href="./v2-willsell.html">Apri vetrina →</a>
+    </div>
 
-    <article class="v2-cell" data-brand="liveai-plus">
-      <span class="v2-cell__label">LIVE AI+</span>
-      <span class="v2-cell__tag">Live events</span>
-      <div class="v2-cell__floor"></div>
-      <div class="ds-glass-lockup">
-        <div class="ds-glass-shape"><svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-liveai-plus"/></svg></div>
-        <div class="ds-glass-badge ds-glass-badge--sm">
-          <div class="ds-glass-badge__wordmark">LIVE<br/>AI+</div>
-          <div class="ds-glass-badge__footer">
-            <span class="ds-glass-badge__aiplus">AI+</span>
-            <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
-          </div>
+    <div class="v2-badge-cell" data-brand="dojo">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">DOJO</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
         </div>
       </div>
-    </article>
+      <p class="v2-badge-cell__name">DOJO</p>
+      <p class="v2-badge-cell__tagline">Allenamento continuo guidato dall'AI.</p>
+      <a class="v2-badge-cell__cta" href="./v2-dojo.html">Apri vetrina →</a>
+    </div>
+
+    <div class="v2-badge-cell" data-brand="creative-studio">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">CREATIVE<br/>STUDIO</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
+        </div>
+      </div>
+      <p class="v2-badge-cell__name">CREATIVE STUDIO</p>
+      <p class="v2-badge-cell__tagline">Creatività alla velocità degli algoritmi.</p>
+      <a class="v2-badge-cell__cta" href="./v2-creative-studio.html">Apri vetrina →</a>
+    </div>
+
+    <div class="v2-badge-cell" data-brand="maindset">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">MAIND<br/>SET</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
+        </div>
+      </div>
+      <p class="v2-badge-cell__name">MAINDSET</p>
+      <p class="v2-badge-cell__tagline">Mindset coach per team che si trasformano.</p>
+      <a class="v2-badge-cell__cta" href="./v2-maindset.html">Apri vetrina →</a>
+    </div>
+
+    <div class="v2-badge-cell" data-brand="leadai">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">LEAD<br/>AI</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
+        </div>
+      </div>
+      <p class="v2-badge-cell__name">LEADAI</p>
+      <p class="v2-badge-cell__tagline">Leadership amplificata dall'AI.</p>
+      <a class="v2-badge-cell__cta" href="./v2-leadai.html">Apri vetrina →</a>
+    </div>
+
+    <div class="v2-badge-cell" data-brand="changelab">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">CHANGE<br/>LAB</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
+        </div>
+      </div>
+      <p class="v2-badge-cell__name">CHANGELAB</p>
+      <p class="v2-badge-cell__tagline">Laboratorio di trasformazione continua.</p>
+      <a class="v2-badge-cell__cta" href="./v2-changelab.html">Apri vetrina →</a>
+    </div>
+
+    <div class="v2-badge-cell" data-brand="liveai-plus">
+      <div class="ds-glass-badge">
+        <div class="ds-glass-badge__wordmark">LIVE<br/>AI+</div>
+        <div class="ds-glass-badge__footer">
+          <span class="ds-glass-badge__aiplus">AI+</span>
+          <span class="ds-glass-badge__powered"><span>powered by</span><span>logotel</span></span>
+        </div>
+      </div>
+      <p class="v2-badge-cell__name">LIVE AI+</p>
+      <p class="v2-badge-cell__tagline">Eventi live amplificati dall'AI.</p>
+      <a class="v2-badge-cell__cta" href="./v2-liveai-plus.html">Apri vetrina →</a>
+    </div>
 
   </main>
 
   <div class="v2-actions">
-    <a class="ds-glass-button ds-glass-button--ink" href="./v2-creative-studio.html">Apri vetrina Creative Studio v2 →</a>
-    <a class="ds-glass-button" href="./index.html">Vai alla v1 (umbrella)</a>
+    <a class="ds-glass-button" href="./index.html">↩ Vai alla v1 (umbrella)</a>
   </div>
 
 </body>
