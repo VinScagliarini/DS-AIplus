@@ -378,7 +378,7 @@ TEMPLATE = """<!doctype html>
           <div class="ds-glass-image-card__bg">
             <img src="{img_url}" alt="" loading="lazy" />
           </div>
-          <h3 class="ds-glass-image-card__title">{image_t}</h3>
+          <h3 class="ds-glass-image-card__title">{image_t_html}</h3>
           <div class="ds-glass-image-card__footer">
             <span class="ds-glass-image-card__wordmark">{wordmark}</span>
             <a class="ds-glass-image-card__cta" href="#">{image_cta}</a>
@@ -534,6 +534,14 @@ SWATCH_TONE = {
 }
 
 
+def highlight_lines(s: str) -> str:
+    """Wrappa ogni riga (separata da <br/>) in <span class="ds-glass-highlight">.
+    Brandboard image #15: il titolo dell'image-card ha un marker cream-pink
+    per ciascuna delle 3 righe."""
+    parts = s.split("<br/>")
+    return "<br/>".join(f'<span class="ds-glass-highlight">{p}</span>' for p in parts)
+
+
 def load_palette(slug: str) -> dict:
     tk = json.loads((REPO / "tokens" / "brands" / f"{slug}.json").read_text(encoding="utf-8"))
     return {
@@ -574,7 +582,7 @@ def render(slug: str) -> str:
         stat_n=c["stat_n"],
         stat_lbl=c["stat_lbl"],
         stat_src=c["stat_src"],
-        image_t=c["image_t"],
+        image_t_html=highlight_lines(c["image_t"]),
         image_cta=c["image_cta"],
         split_eb=c["split_eb"],
         split_txt=c["split_txt"],

@@ -878,10 +878,15 @@
   content: "";
   position: absolute;
   inset: 0;
+  /* Overlay denso brand sul bottom 60%, top resta visibile della foto.
+     Calibrato per matchare CREATIVE_STUDIO_BrandBoard.ai (image #15) */
   background:
-    linear-gradient(180deg, rgba(13,5,15,0.45) 0%, rgba(13,5,15,0.0) 35%, rgba(13,5,15,0.0) 55%, color-mix(in srgb, var(--brand-deep) 75%, transparent) 100%),
-    color-mix(in srgb, var(--brand) 22%, transparent);
-  mix-blend-mode: multiply;
+    linear-gradient(180deg,
+      rgba(13,5,15,0.45) 0%,
+      rgba(13,5,15,0.0) 22%,
+      color-mix(in srgb, var(--brand-deep) 30%, transparent) 45%,
+      color-mix(in srgb, var(--brand-deep) 88%, transparent) 100%);
+  mix-blend-mode: normal;
 }
 .ds-glass-image-card__title {
   position: relative;
@@ -898,7 +903,11 @@
 }
 .ds-glass-image-card__title .ds-glass-highlight {
   background: color-mix(in srgb, var(--ds-highlight-cream) 75%, transparent);
-  color: var(--ds-ink-deep);
+  color: var(--ds-cream);
+  padding: 0.1em 0.3em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0.2em;
 }
 .ds-glass-image-card__footer {
   position: relative;
@@ -922,17 +931,18 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 1rem;
+  padding: 0.7rem 1.2rem;
   border-radius: var(--ds-radius-pill);
   background: var(--brand-ink-deep);
   color: var(--ds-cream);
-  font-family: var(--ds-font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-family: var(--ds-font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: none;
+  box-shadow: 0 8px 18px -6px rgba(13,5,15,0.4);
 }
 
 /* ================================================================
@@ -1029,9 +1039,8 @@
   position: relative;
   isolation: isolate;
   overflow: visible;
-  max-width: 52rem;          /* blocco compatto, no full-shell */
-  margin: 0 auto;            /* centrato nel container */
-  padding-right: clamp(2.5rem, 4vw, 3.5rem); /* spazio per pill che sporge */
+  max-width: 42rem;          /* blocco compatto centrato */
+  margin: 0 auto;
 }
 .ds-glass-stack-card__top {
   grid-column: 1 / -1;
@@ -1039,7 +1048,7 @@
   position: relative;
   border-radius: var(--ds-radius-card);
   overflow: hidden;
-  aspect-ratio: 2.55 / 1;
+  aspect-ratio: 2.05 / 1;
   background: var(--brand-ink-deep);
 }
 .ds-glass-stack-card__top img {
@@ -1085,7 +1094,7 @@
   position: relative;
   border-radius: var(--ds-radius-card);
   overflow: hidden;
-  aspect-ratio: 2 / 1;       /* meno slim, più "card-like" come in brandboard */
+  aspect-ratio: 2.9 / 1;     /* slim landscape, ratio brandboard */
   background: var(--brand-ink-deep);
   z-index: 2;
 }
@@ -1103,15 +1112,14 @@
 }
 .ds-glass-stack-card__pill {
   position: absolute;
-  right: 0;
-  bottom: clamp(0.5rem, 1.5vw, 1rem);
-  transform: translateX(35%);       /* sporge oltre il bordo destro */
+  left: 50%;                        /* parte dalla metà del wrapper = inizio bottom-card */
+  right: -3.5rem;                   /* sporge poco oltre il bordo destro */
+  bottom: clamp(0.3rem, 0.5vw, 0.6rem);
+  height: clamp(2.6rem, 4vw, 3rem);
   z-index: 3;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.6rem;
-  min-width: 14rem;
+  justify-content: center;
   border-radius: var(--ds-radius-pill);
   background: var(--brand-ink-deep);
   color: var(--ds-cream);
@@ -1119,20 +1127,20 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-decoration: none;
-  box-shadow: 0 16px 36px -10px rgba(13,5,15,0.55);
+  box-shadow: 0 12px 28px -10px rgba(13,5,15,0.5);
+  padding: 0 1.5rem;
 }
 @media (max-width: 720px) {
-  .ds-glass-stack-card { padding-right: 0; }
-  .ds-glass-stack-card__bottom { grid-column: 1 / -1; aspect-ratio: 2.2 / 1; }
+  .ds-glass-stack-card__bottom { grid-column: 1 / -1; aspect-ratio: 2.5 / 1; }
   .ds-glass-stack-card__pill {
     position: relative;
-    right: auto; top: auto;
-    transform: none;
-    margin: 0.75rem auto 0;
+    left: auto; right: auto; bottom: auto;
+    margin: 0.6rem auto 0;
     display: flex;
-    justify-content: center;
+    height: 2.6rem;
+    width: max-content;
   }
 }
 
