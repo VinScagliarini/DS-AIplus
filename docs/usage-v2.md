@@ -155,8 +155,7 @@ sono riutilizzati 1:1 — non rifaccio la palette.
   Hive con shape Willsell).
 - Non ridurre la `--ds-glass-blur` sotto 12px o il vetro diventa "sporco"
   senza leggersi come glass.
-- Non sostituire MuseoModerno (display). Per il body, in v2 si usa
-  **Open Sans** (come da brandboard); in v1 resta Roboto.
+- Non sostituire MuseoModerno (display) né Roboto (body).
 
 ## Palette estesa Creative Studio (v2)
 

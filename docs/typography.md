@@ -20,21 +20,16 @@ L'ecosistema AI+ usa **due famiglie**, niente terze.
 }
 ```
 
-## Body — Roboto (v1) · Open Sans (v2)
+## Body — Roboto
 
 - Sub heads, paragrafi, UI minute, micro-copy.
-- **v1**: Roboto — pesi `300`, `400`, `500`, `700`.
-- **v2 / brand expansion**: Open Sans (vedi `tokens/glass.json`), come
-  da `CREATIVE_STUDIO_BrandBoard.ai`.
-- CDN Roboto: `https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap`
-- CDN Open Sans: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap`
+- Pesi: `300`, `400`, `500`, `700`.
+- Vale per v1 e v2 (il brandboard 2026 propone Open Sans ma la
+  convenzione del DS resta Roboto).
+- CDN: `https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap`
 
 ```css
-/* v1 */
 body { font-family: "Roboto", system-ui, sans-serif; line-height: 1.65; }
-
-/* v2 (su pagine con styles/v2.css linkato) */
-body { font-family: var(--ds-font-body-v2); line-height: 1.65; }
 ```
 
 ## Type scale

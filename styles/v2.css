@@ -532,7 +532,7 @@
    Le pagine v1 restano sulla palette originale.
    ================================================================ */
 :root {
-  --ds-font-body-v2: "Open Sans", system-ui, sans-serif;
+  --ds-font-body-v2: "Roboto", system-ui, sans-serif;
   --ds-highlight-cream: #FBE0DE; /* pill inline cream-pink dietro le parole */
 }
 

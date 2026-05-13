@@ -8,9 +8,9 @@
   "typography": {
     "font-family": {
       "body-v2": {
-        "value": "'Open Sans', system-ui, sans-serif",
+        "value": "'Roboto', system-ui, sans-serif",
         "type": "fontFamily",
-        "description": "Body font v2 — sostituisce Roboto sui touchpoint brand expansion. Indicato da CREATIVE_STUDIO_BrandBoard.ai sotto la label 'SUB HEADS + PARAGRAPHS'."
+        "description": "Body font v2 — allineato a Roboto su esplicita richiesta cliente (il brandboard indica Open Sans ma la convenzione del DS resta Roboto)."
       }
     }
   },

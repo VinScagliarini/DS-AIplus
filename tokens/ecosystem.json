@@ -20,7 +20,7 @@
   "typography": {
     "font-family": {
       "display":  { "value": "'MuseoModerno', system-ui, sans-serif", "type": "fontFamily", "description": "Headlines e wordmark" },
-      "body":     { "value": "'Roboto', system-ui, sans-serif", "type": "fontFamily", "description": "Sub heads e paragrafi (v1). In v2 brand expansion il body diventa Open Sans — vedi tokens/glass.json." },
+      "body":     { "value": "'Roboto', system-ui, sans-serif", "type": "fontFamily", "description": "Sub heads e paragrafi (v1 + v2)." },
       "mono":     { "value": "'JetBrains Mono', ui-monospace, monospace", "type": "fontFamily" }
     },
     "font-weight": {
