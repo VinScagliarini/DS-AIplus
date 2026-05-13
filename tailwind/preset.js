@@ -47,7 +47,7 @@ const preset = {
       },
       fontFamily: {
         display: ["MuseoModerno", "system-ui", "sans-serif"],
-        body:    ["Roboto", "Myriad Pro", "system-ui", "sans-serif"],
+        body:    ["Roboto", "system-ui", "sans-serif"],
         mono:    ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       fontSize: {

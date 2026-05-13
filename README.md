@@ -28,7 +28,7 @@ ai-plus-ecosystem-ds/
 │   ├── brands/<slug>.css    Override delle custom property per brand
 │   └── index.css            Entry-point unico (importa tutto)
 ├── tailwind/preset.js       Tailwind preset brand-aware
-├── fonts/                   MuseoModerno + Myriad Pro (originali pacchetto)
+├── fonts/                   MuseoModerno variable font (display)
 ├── assets/
 │   ├── badges/<slug>.png    Badge AI+ renderizzati (9 file)
 │   ├── glass-logos/<slug>.png  Glass logos 3D (9 file)

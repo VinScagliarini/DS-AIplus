@@ -17,7 +17,7 @@
 
   /* Tipografia */
   --ds-font-display: "MuseoModerno", system-ui, sans-serif;
-  --ds-font-body:    "Roboto", "Myriad Pro", system-ui, sans-serif;
+  --ds-font-body:    "Roboto", system-ui, sans-serif;
   --ds-font-mono:    "JetBrains Mono", ui-monospace, monospace;
 
   --ds-fw-light:    300;

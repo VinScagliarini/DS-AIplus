@@ -5,6 +5,35 @@
   "version": "2.0.0",
   "extends": "ecosystem.json",
 
+  "typography": {
+    "font-family": {
+      "body-v2": {
+        "value": "'Open Sans', system-ui, sans-serif",
+        "type": "fontFamily",
+        "description": "Body font v2 — sostituisce Roboto sui touchpoint brand expansion. Indicato da CREATIVE_STUDIO_BrandBoard.ai sotto la label 'SUB HEADS + PARAGRAPHS'."
+      }
+    }
+  },
+
+  "brand-palette-v2": {
+    "creative-studio": {
+      "description": "Palette estesa Creative Studio v2 — 5 step verticali dal brandboard 2026.",
+      "bg-start":  { "value": "#FDF6FB", "type": "color", "description": "Off-white con undertone magenta — base background pagine v2." },
+      "soft":      { "value": "#F6D4F3", "type": "color", "description": "Lavender chiaro — fondi card, hover surfaces." },
+      "primary":   { "value": "#E76BF0", "type": "color", "description": "Magenta brand v2 (più caldo/rosa rispetto al #D464F0 di v1)." },
+      "ink":       { "value": "#2D1035", "type": "color", "description": "Plum-black con undertone brand — testo headline su light." },
+      "ink-deep":  { "value": "#0D050F", "type": "color", "description": "Quasi-nero — body text, surfaces dark." }
+    }
+  },
+
+  "text-highlight": {
+    "creative-studio": {
+      "value": "#FBE0DE",
+      "type": "color",
+      "description": "Pill cream-pink usata come sfondo inline dietro le parole chiave nelle headline (es. carousel card 'PRODUCI CREATIVITÀ ALLA VELOCITÀ DEGLI ALGORITMI'). Padding 0 0.25em."
+    }
+  },
+
   "glass": {
     "tint": {
       "value": "rgba(255, 255, 255, 0.58)",

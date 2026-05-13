@@ -525,6 +525,532 @@
 [data-brand="liveai-plus"]     { --brand-shape-rotation:   0deg; }
 
 /* ================================================================
+   V2 PALETTE OVERRIDE — Creative Studio brand expansion
+   ----------------------------------------------------------------
+   Dati da CREATIVE_STUDIO_BrandBoard.ai: 5 step verticali esatti.
+   Applicato a tutta la pagina quando l'<html> ha data-ds-version="2".
+   Le pagine v1 restano sulla palette originale.
+   ================================================================ */
+:root {
+  --ds-font-body-v2: "Open Sans", system-ui, sans-serif;
+  --ds-highlight-cream: #FBE0DE; /* pill inline cream-pink dietro le parole */
+}
+
+[data-ds-version="2"][data-brand="creative-studio"],
+[data-ds-version="2"] [data-brand="creative-studio"] {
+  --brand-bg-start: #FDF6FB;
+  --brand-bg-end:   #F6D4F3;
+  --brand-soft:     #F6D4F3;
+  --brand:          #E76BF0;
+  --brand-deep:     #C038DC;
+  --brand-ink:      #2D1035;
+  --brand-ink-deep: #0D050F;
+  --brand-glow:     rgba(231, 107, 240, 0.40);
+}
+
+[data-ds-version="2"] {
+  --ds-font-body: var(--ds-font-body-v2);
+}
+
+/* ================================================================
+   TEXT HIGHLIGHT — pill cream-pink inline dietro le parole chiave.
+   <span class="ds-glass-highlight">PRODUCI</span>
+   ================================================================ */
+.ds-glass-highlight {
+  background: var(--ds-highlight-cream);
+  padding: 0 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0.15em;
+}
+
+/* ================================================================
+   CAROUSEL CARD — Image #1
+   Card portrait con gradient brand-soft → primary, headline con
+   text-highlight, body, dots di carousel, wordmark in basso.
+   ================================================================ */
+.ds-glass-carousel-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1.5rem;
+  border-radius: var(--ds-radius-card);
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  aspect-ratio: 9 / 14;
+  max-width: 22rem;
+  background:
+    radial-gradient(140% 100% at 100% 60%, var(--brand) 0%, transparent 70%),
+    linear-gradient(160deg, var(--brand-bg-start) 0%, var(--brand-soft) 70%, var(--brand) 100%);
+  color: var(--ds-ink-deep);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--ds-shadow-card-soft);
+}
+.ds-glass-carousel-card__title {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ds-ink-deep);
+}
+.ds-glass-carousel-card__title .ds-glass-highlight {
+  display: inline;
+}
+.ds-glass-carousel-card__body {
+  font-family: var(--ds-font-body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ds-ink-deep);
+  margin: 0;
+}
+.ds-glass-carousel-card__dots {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+.ds-glass-carousel-card__dots i {
+  display: block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+}
+.ds-glass-carousel-card__dots i[data-active="1"] { background: var(--brand-ink-deep); }
+.ds-glass-carousel-card__wordmark {
+  display: flex;
+  align-items: end;
+  gap: 0.6rem;
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 0.95rem;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+}
+
+/* ================================================================
+   STAT CARD — Image #3
+   Numero gigante con highlight cream dietro, label, fonte, area chart
+   stilizzata in fondo (SVG inline).
+   ================================================================ */
+.ds-glass-stat-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 1rem;
+  border-radius: var(--ds-radius-card);
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  aspect-ratio: 7 / 10;
+  max-width: 20rem;
+  background: var(--ds-cream);
+  color: var(--ds-ink-deep);
+  overflow: hidden;
+  box-shadow: var(--ds-shadow-card-soft);
+  isolation: isolate;
+}
+.ds-glass-stat-card__number {
+  font-family: var(--ds-font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  align-self: start;
+  width: max-content;
+}
+.ds-glass-stat-card__number .ds-glass-highlight { padding: 0 0.12em; }
+.ds-glass-stat-card__label {
+  font-family: var(--ds-font-body);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.3;
+  color: var(--ds-ink-deep);
+  margin: 0;
+  max-width: 18ch;
+  font-weight: 600;
+}
+.ds-glass-stat-card__source {
+  font-family: var(--ds-font-body);
+  font-size: 0.78rem;
+  color: var(--ds-ink-muted);
+  margin: 0;
+}
+.ds-glass-stat-card__chart {
+  align-self: end;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ds-glass-stat-card__chart path {
+  fill: var(--brand);
+  fill-opacity: 0.85;
+}
+
+/* ================================================================
+   HERO INK — Image #2
+   Hero scuro (--brand-ink-deep) con logo simbolo + wordmark a sx,
+   headline + CTA, mockup UI a destra (bleed sul lato).
+   ================================================================ */
+.ds-glass-hero-ink {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  position: relative;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-radius: var(--ds-radius-card);
+  background:
+    radial-gradient(60% 80% at 100% 0%, color-mix(in srgb, var(--brand) 55%, transparent) 0%, transparent 60%),
+    radial-gradient(80% 80% at 0% 100%, color-mix(in srgb, var(--brand-deep) 40%, transparent) 0%, transparent 60%),
+    var(--brand-ink-deep);
+  color: var(--ds-cream);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ds-glass-hero-ink__lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.ds-glass-hero-ink__symbol {
+  width: 2.25rem; height: 2.25rem;
+  display: grid; place-items: center;
+}
+.ds-glass-hero-ink__symbol svg { width:100%; height:100%; color: var(--ds-cream); }
+.ds-glass-hero-ink__wordmark {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.ds-glass-hero-ink__title {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin: 0 0 0.85rem;
+  max-width: 18ch;
+}
+.ds-glass-hero-ink__sub {
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+  color: rgba(247, 246, 243, 0.85);
+  max-width: 38ch;
+}
+.ds-glass-hero-ink__media {
+  position: relative;
+  align-self: stretch;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-right: clamp(-2rem, -3vw, -1rem);
+}
+.ds-glass-hero-ink__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+/* ================================================================
+   NAV (sidebar verticale) — Image #4
+   Badge in cima + lista link verticale, link attivo = pill gradient
+   brand-soft → brand.
+   ================================================================ */
+.ds-glass-nav {
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  max-width: 14rem;
+  font-family: var(--ds-font-body);
+}
+.ds-glass-nav__brand {
+  width: 100%;
+}
+.ds-glass-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.ds-glass-nav__link {
+  display: block;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--ds-radius-pill);
+  font-family: var(--ds-font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ds-ink-deep);
+  text-decoration: none;
+  transition: background var(--ds-dur-fast) var(--ds-ease-standard);
+}
+.ds-glass-nav__link:hover {
+  background: var(--brand-soft);
+}
+.ds-glass-nav__link[data-active="1"] {
+  background: linear-gradient(90deg, var(--brand-soft) 0%, var(--brand) 100%);
+  color: var(--ds-ink-deep);
+  font-weight: 600;
+}
+
+/* ================================================================
+   BUTTON VARIANTS aggiuntivi — Image #5
+   ================================================================ */
+.ds-glass-button--brand-fill {
+  background: var(--brand);
+  color: var(--ds-ink-deep);
+  box-shadow: var(--ds-glass-ring), var(--ds-glass-shadow-brand);
+}
+.ds-glass-button--brand-gradient {
+  background: linear-gradient(90deg, var(--brand-soft) 0%, var(--brand) 100%);
+  color: var(--ds-ink-deep);
+  box-shadow: var(--ds-glass-ring), var(--ds-glass-shadow-brand);
+}
+.ds-glass-button--soft-light {
+  background: var(--brand-soft);
+  color: var(--ds-ink-deep);
+  opacity: 0.65;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.ds-glass-button--outline {
+  background: transparent;
+  color: var(--brand);
+  border: 1.5px solid var(--brand);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+.ds-glass-button--icon {
+  padding: 0.55rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-grid;
+  place-items: center;
+  background: transparent;
+  color: var(--brand);
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* ================================================================
+   IMAGE CARD — Image #6
+   Card portrait con foto bg, overlay tint brand semi-trasparente,
+   headline con text-highlight in alto, wordmark + CTA pill in basso.
+   ================================================================ */
+.ds-glass-image-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  border-radius: var(--ds-radius-card);
+  overflow: hidden;
+  aspect-ratio: 9 / 14;
+  max-width: 22rem;
+  color: var(--ds-cream);
+  isolation: isolate;
+  background: var(--brand-ink-deep);
+}
+.ds-glass-image-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.ds-glass-image-card__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ds-glass-image-card__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(13,5,15,0.45) 0%, rgba(13,5,15,0.0) 35%, rgba(13,5,15,0.0) 55%, color-mix(in srgb, var(--brand-deep) 75%, transparent) 100%),
+    color-mix(in srgb, var(--brand) 22%, transparent);
+  mix-blend-mode: multiply;
+}
+.ds-glass-image-card__title {
+  position: relative;
+  z-index: 1;
+  margin: clamp(1.25rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.75rem) 0;
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: var(--ds-cream);
+  max-width: 18ch;
+}
+.ds-glass-image-card__title .ds-glass-highlight {
+  background: color-mix(in srgb, var(--ds-highlight-cream) 75%, transparent);
+  color: var(--ds-ink-deep);
+}
+.ds-glass-image-card__footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  padding: 0 clamp(1.25rem, 2vw, 1.75rem) clamp(1.25rem, 2vw, 1.75rem);
+}
+.ds-glass-image-card__wordmark {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 0.95rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ds-cream);
+}
+.ds-glass-image-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--ds-radius-pill);
+  background: var(--brand-ink-deep);
+  color: var(--ds-cream);
+  font-family: var(--ds-font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ================================================================
+   SPLIT CARD — Image #7
+   Landscape card: foto a sx full-bleed + caption overlay,
+   sotto/sopra un secondo box ovale "CREATE SOMETHING" overlap.
+   ================================================================ */
+.ds-glass-split-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 0;
+  border-radius: var(--ds-radius-card);
+  overflow: visible;
+  isolation: isolate;
+  min-height: clamp(14rem, 22vw, 18rem);
+}
+.ds-glass-split-card__media {
+  position: relative;
+  border-radius: var(--ds-radius-card);
+  overflow: hidden;
+}
+.ds-glass-split-card__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ds-glass-split-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(13,5,15,0.55) 0%, rgba(13,5,15,0.2) 60%, transparent 100%);
+}
+.ds-glass-split-card__caption {
+  position: absolute;
+  top: clamp(1.25rem, 2vw, 1.75rem);
+  left: clamp(1.25rem, 2vw, 1.75rem);
+  z-index: 1;
+  max-width: 18ch;
+}
+.ds-glass-split-card__caption-eyebrow {
+  display: block;
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--ds-cream);
+  margin-bottom: 0.5rem;
+}
+.ds-glass-split-card__caption-text {
+  font-family: var(--ds-font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(247, 246, 243, 0.92);
+  margin: 0;
+}
+.ds-glass-split-card__pill {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -1.25rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2rem;
+  min-width: 18rem;
+  border-radius: var(--ds-radius-pill);
+  background: var(--brand-ink-deep);
+  color: var(--ds-cream);
+  font-family: var(--ds-font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 16px 30px -12px rgba(13,5,15,0.5);
+}
+
+/* ================================================================
+   HEADING CARD — Image #8
+   Card landscape: gradient brand-soft → bg-start, wordmark display
+   gigante a sinistra + headline body a destra.
+   ================================================================ */
+.ds-glass-heading-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 3vw, 2.5rem);
+  border-radius: var(--ds-radius-card);
+  background:
+    linear-gradient(110deg, var(--brand-soft) 0%, color-mix(in srgb, var(--brand) 18%, var(--brand-bg-start)) 100%);
+  color: var(--ds-ink-deep);
+  box-shadow: var(--ds-shadow-card-soft);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ds-glass-heading-card__wordmark {
+  font-family: var(--ds-font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.ds-glass-heading-card__headline {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: var(--ds-fw-medium);
+  line-height: 1.15;
+  margin: 0;
+  max-width: 32ch;
+}
+
+/* ================================================================
    Reduced motion: niente hover transforms, niente rotation sulla shape.
    ================================================================ */
 @media (prefers-reduced-motion: reduce) {

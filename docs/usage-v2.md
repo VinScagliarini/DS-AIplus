@@ -155,7 +155,48 @@ sono riutilizzati 1:1 — non rifaccio la palette.
   Hive con shape Willsell).
 - Non ridurre la `--ds-glass-blur` sotto 12px o il vetro diventa "sporco"
   senza leggersi come glass.
-- Non sostituire MuseoModerno / Roboto. Identica regola di v1.
+- Non sostituire MuseoModerno (display). Per il body, in v2 si usa
+  **Open Sans** (come da brandboard); in v1 resta Roboto.
+
+## Palette estesa Creative Studio (v2)
+
+Estratta dal brandboard `CREATIVE_STUDIO_BrandBoard.ai`. Sovrascrive la
+palette v1 SOLO quando l'`<html>` ha `data-ds-version="2"`.
+
+| Step | Hex | Ruolo |
+|---|---|---|
+| `--brand-bg-start` | `#FDF6FB` | Off-white tinto magenta — base pagina |
+| `--brand-soft`     | `#F6D4F3` | Lavender chiaro — card light, hover |
+| `--brand`          | `#E76BF0` | Magenta primary — CTA, accenti, fill |
+| `--brand-ink`      | `#2D1035` | Plum-black — headline su light |
+| `--brand-ink-deep` | `#0D050F` | Quasi-nero — body text, surfaces dark |
+
+Activazione:
+
+```html
+<html data-brand="creative-studio" data-ds-version="2">
+```
+
+> Le altre 8 palette espanse arriveranno quando saranno disponibili i
+> brandboard dei rispettivi brand.
+
+## Componenti dal brandboard
+
+Tutti definiti in `styles/v2.css`, copy esatta dal `.ai`.
+
+| Classe | Brandboard | Note |
+|---|---|---|
+| `.ds-glass-heading-card` | "Scegli cosa creare. Lui fa il resto." | Wordmark gigante sx + headline body dx, gradient brand-soft |
+| `.ds-glass-carousel-card` | "PRODUCI CREATIVITÀ ALLA VELOCITÀ DEGLI ALGORITMI" | Portrait, headline con `.ds-glass-highlight`, dots, wordmark |
+| `.ds-glass-stat-card` | "75% dei Designer e Videomaker..." | Numero + highlight, label, fonte, SVG area chart |
+| `.ds-glass-image-card` | "UN SOLO PROMPT. UN WORKFLOW GUIDATO..." | Foto bg + overlay brand + headline con highlight + CTA pill |
+| `.ds-glass-split-card` | "L'AI IMPARA IL TUO BRAND" | Foto landscape + caption + pill "Create something" overlap |
+| `.ds-glass-hero-ink` | "Un editor AI che capisce il linguaggio naturale" | Hero dark con UI mockup laterale + lockup + CTA "Start creating" |
+| `.ds-glass-nav` | Sidebar Overview/Features/Clients/Pricing/Help/About | Badge in cima + link list, active = pill gradient |
+| Buttons v2 | 6 stati visivi | `--soft-light`, default, `--brand-fill`, `--brand-gradient`, `--outline`, `--ink`, `--icon` |
+| Utility | text highlight inline | `.ds-glass-highlight` — span con bg `--ds-highlight-cream` (`#FBE0DE`) |
+
+Vedi `examples/v2-creative-studio.html` per il render completo.
 
 ## Accessibility
 
