@@ -1,0 +1,535 @@
+/* ================================================================
+   AI+ Ecosystem · V2 / Brand Expansion (glassmorphic layer)
+   ----------------------------------------------------------------
+   Estende styles/index.css: aggiunge il linguaggio "vetro 3D" che
+   nasce dai brandboard 2026 (Creative Studio espanso) e si declina
+   per i 9 brand verticali. NON modifica i componenti v1.
+
+   Import:
+     <link rel="stylesheet" href="../styles/index.css" />
+     <link rel="stylesheet" href="../styles/v2.css" />
+   ================================================================ */
+
+:root {
+  /* Glass surface */
+  --ds-glass-tint:        rgba(255, 255, 255, 0.58);
+  --ds-glass-tint-strong: rgba(255, 255, 255, 0.72);
+  --ds-glass-tint-soft:   rgba(255, 255, 255, 0.32);
+  --ds-glass-blur:        24px;
+  --ds-glass-blur-strong: 40px;
+
+  /* Glass shadows + rims */
+  --ds-glass-ring:        inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  --ds-glass-ring-dark:   inset 0 0 0 1px rgba(15, 4, 24, 0.08);
+  --ds-glass-shadow:      0 24px 60px -20px rgba(15, 4, 24, 0.30),
+                          0 8px 18px -8px rgba(15, 4, 24, 0.18);
+  --ds-glass-shadow-floor:0 30px 24px -22px rgba(15, 4, 24, 0.28);
+  --ds-glass-shadow-brand:0 30px 80px -24px var(--brand-glow, rgba(0,0,0,0.25));
+
+  /* Highlights */
+  --ds-glass-highlight:   linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 55%);
+  --ds-glass-lowlight:    linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.25) 100%);
+
+  /* Radii */
+  --ds-radius-glass-card:  1.5rem;
+  --ds-radius-glass-badge: 1.1rem;
+  --ds-radius-glass-shape: 0.8rem;
+
+  /* Default shape (Creative Studio = square). Override per brand più sotto. */
+  --brand-shape-rotation: -12deg;
+  --brand-shape-scale:    1;
+}
+
+/* ================================================================
+   STAGE — sfondo "scena" su cui poggia la glass shape.
+   Va usato come wrapper grande di hero v2.
+   ================================================================ */
+.ds-stage {
+  position: relative;
+  border-radius: var(--ds-radius-card);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(120% 80% at 80% 10%, var(--brand-soft) 0%, transparent 60%),
+    radial-gradient(80% 60% at 20% 90%, color-mix(in srgb, var(--brand) 35%, white) 0%, transparent 65%),
+    var(--ds-cream);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  min-height: clamp(22rem, 40vw, 32rem);
+  color: var(--ds-ink-deep);
+}
+
+.ds-stage::before {
+  /* Floor sotto la shape — ombra ellisse soft */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  width: 36%;
+  height: 6%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(15,4,24,0.25) 0%, transparent 70%);
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.ds-stage--cream {
+  background:
+    radial-gradient(120% 80% at 80% 10%, var(--brand-soft) 0%, transparent 60%),
+    var(--ds-cream);
+}
+
+.ds-stage--ink {
+  background:
+    radial-gradient(120% 80% at 80% 10%, color-mix(in srgb, var(--brand) 30%, transparent) 0%, transparent 65%),
+    radial-gradient(80% 60% at 20% 90%, color-mix(in srgb, var(--brand-deep) 25%, transparent) 0%, transparent 65%),
+    var(--brand-ink-deep);
+  color: var(--ds-cream);
+}
+
+/* ================================================================
+   GLASS BADGE — pill rounded bianca translucida con highlight,
+   wordmark uppercase + AI+ + powered-by-logotel.
+   Versione "premium" del .ds-badge v1.
+   ================================================================ */
+.ds-glass-badge {
+  position: relative;
+  width: clamp(12rem, 18vw, 16rem);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--ds-radius-glass-badge);
+  padding: clamp(1rem, 1.6vw, 1.4rem);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background:
+    var(--ds-glass-highlight),
+    linear-gradient(160deg, rgba(255,255,255,0.85) 0%, var(--brand-soft) 100%);
+  box-shadow:
+    var(--ds-glass-ring),
+    var(--ds-glass-shadow);
+  color: var(--ds-ink-deep);
+  isolation: isolate;
+  overflow: hidden;
+}
+.ds-glass-badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--ds-glass-lowlight);
+  pointer-events: none;
+  z-index: 0;
+}
+.ds-glass-badge__wordmark {
+  position: relative;
+  align-self: end;
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-semibold);
+  font-size: clamp(1.2rem, 2.2vw, 1.85rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+  letter-spacing: var(--ds-tracking-display);
+  z-index: 1;
+}
+.ds-glass-badge__footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-family: var(--ds-font-display);
+  font-size: 0.85rem;
+  color: var(--ds-ink-deep);
+  z-index: 1;
+}
+.ds-glass-badge__aiplus {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-medium);
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
+}
+.ds-glass-badge__powered {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: var(--ds-font-body);
+  font-size: 0.55rem;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+.ds-glass-badge__powered span:last-child {
+  font-family: var(--ds-font-display);
+  font-weight: var(--ds-fw-medium);
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+  margin-top: 2px;
+}
+.ds-glass-badge--lg { width: clamp(16rem, 24vw, 20rem); }
+.ds-glass-badge--sm { width: clamp(8rem, 12vw, 11rem); }
+
+/* ================================================================
+   GLASS SHAPE — la forma 3D specifica del brand renderizzata in SVG.
+   Va usata accanto al glass badge per evocare il "logo dimensional".
+   La forma viene composta da:
+     - un <svg> brand-specific (gradient + highlight) come immagine
+     - un floor reflection sotto
+     - rotazione per brand
+   ================================================================ */
+.ds-glass-shape {
+  position: relative;
+  width: clamp(10rem, 18vw, 16rem);
+  aspect-ratio: 1 / 1;
+  filter: drop-shadow(0 28px 30px rgba(15,4,24,0.22));
+  transform: rotate(var(--brand-shape-rotation, -8deg)) scale(var(--brand-shape-scale, 1));
+  transition: transform var(--ds-dur-normal) var(--ds-ease-spring);
+}
+.ds-glass-shape svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--brand); /* fill di currentColor nelle <symbol> sprite */
+}
+.ds-glass-shape:hover {
+  transform: rotate(calc(var(--brand-shape-rotation, -8deg) * 0.4)) scale(1.04);
+}
+.ds-glass-shape__droplet {
+  position: absolute;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  bottom: -0.5rem;
+  right: 10%;
+  background: radial-gradient(circle at 35% 30%,
+              rgba(255,255,255,0.95) 0%,
+              rgba(255,255,255,0.45) 40%,
+              rgba(255,255,255,0.1) 75%,
+              transparent 100%);
+  filter: blur(0.3px);
+}
+
+/* ================================================================
+   GLASS LOCKUP — wrapper che mette badge + shape uno accanto all'altro.
+   È il "logo completo" del brand in versione v2.
+   ================================================================ */
+.ds-glass-lockup {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(-2rem, -3vw, -1rem); /* sovrapposizione voluta */
+  z-index: 1;
+}
+.ds-glass-lockup .ds-glass-badge {
+  z-index: 2;
+  justify-self: end;
+}
+.ds-glass-lockup .ds-glass-shape {
+  z-index: 1;
+  justify-self: start;
+  margin-left: -22%;
+}
+.ds-glass-lockup--reverse {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+.ds-glass-lockup--reverse .ds-glass-badge {
+  justify-self: start;
+  order: 2;
+}
+.ds-glass-lockup--reverse .ds-glass-shape {
+  justify-self: end;
+  order: 1;
+  margin-left: 0;
+  margin-right: -22%;
+}
+
+/* ================================================================
+   GLASS CARD — surface translucida usabile per moduli, panel.
+   Equivalente v2 di .ds-module-card / .ds-hero-card.
+   Richiede backdrop-filter (graceful degrade su browser legacy).
+   ================================================================ */
+.ds-glass-card {
+  position: relative;
+  border-radius: var(--ds-radius-glass-card);
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  background:
+    var(--ds-glass-highlight),
+    var(--ds-glass-tint);
+  backdrop-filter: blur(var(--ds-glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--ds-glass-blur)) saturate(140%);
+  box-shadow:
+    var(--ds-glass-ring),
+    var(--ds-glass-shadow);
+  color: var(--ds-ink-deep);
+}
+.ds-glass-card--strong {
+  background:
+    var(--ds-glass-highlight),
+    var(--ds-glass-tint-strong);
+}
+.ds-glass-card--soft {
+  background:
+    var(--ds-glass-highlight),
+    var(--ds-glass-tint-soft);
+}
+.ds-glass-card--brand {
+  /* fill brand soft + glass overlay */
+  background:
+    var(--ds-glass-highlight),
+    linear-gradient(160deg, rgba(255,255,255,0.55) 0%, var(--brand-soft) 100%);
+  box-shadow:
+    var(--ds-glass-ring),
+    var(--ds-glass-shadow-brand);
+}
+
+.ds-glass-card__eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-eyebrow);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+  opacity: 0.7;
+  margin: 0 0 0.5rem;
+}
+.ds-glass-card__title {
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+.ds-glass-card__desc {
+  font-family: var(--ds-font-body);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--ds-ink);
+}
+
+/* ================================================================
+   GLASS PILL + GLASS BUTTON
+   ================================================================ */
+.ds-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--ds-radius-pill);
+  background:
+    var(--ds-glass-highlight),
+    var(--ds-glass-tint);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: var(--ds-glass-ring), 0 4px 10px -4px rgba(15,4,24,0.18);
+  color: var(--ds-ink-deep);
+  font-family: var(--ds-font-body);
+  font-size: 0.78rem;
+  font-weight: var(--ds-fw-medium);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border: none;
+}
+.ds-glass-pill__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--brand);
+  flex: none;
+}
+
+.ds-glass-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--ds-radius-button);
+  background:
+    var(--ds-glass-highlight),
+    var(--ds-glass-tint-strong);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: var(--ds-glass-ring), 0 8px 18px -8px rgba(15,4,24,0.22);
+  color: var(--ds-ink-deep);
+  font-family: var(--ds-font-body);
+  font-weight: var(--ds-fw-semibold);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard),
+              box-shadow var(--ds-dur-normal) var(--ds-ease-standard);
+}
+.ds-glass-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ds-glass-ring), var(--ds-glass-shadow-brand);
+}
+.ds-glass-button--brand {
+  background:
+    var(--ds-glass-highlight),
+    linear-gradient(135deg, var(--brand-soft) 0%, var(--brand) 100%);
+}
+.ds-glass-button--ink {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%),
+    var(--brand-ink-deep);
+  color: var(--ds-cream);
+  box-shadow: var(--ds-glass-ring-dark), 0 8px 18px -8px rgba(15,4,24,0.4);
+}
+
+/* ================================================================
+   GLASS HERO — hero v2 con stage + lockup + headline laterale
+   ================================================================ */
+.ds-glass-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-radius: var(--ds-radius-card);
+  background:
+    radial-gradient(80% 60% at 90% 10%, var(--brand-soft) 0%, transparent 60%),
+    radial-gradient(60% 50% at 0% 100%, color-mix(in srgb, var(--brand) 25%, white) 0%, transparent 60%),
+    var(--ds-cream);
+  color: var(--ds-ink-deep);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ds-glass-hero__body { display: grid; gap: 1.25rem; }
+.ds-glass-hero__eyebrow {
+  font-family: var(--ds-font-body);
+  font-size: var(--ds-fs-eyebrow);
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-deep);
+  opacity: 0.7;
+}
+.ds-glass-hero__title {
+  font-family: var(--ds-font-display);
+  font-size: var(--ds-fs-display);
+  font-weight: var(--ds-fw-semibold);
+  line-height: var(--ds-lh-snug);
+  letter-spacing: var(--ds-tracking-display);
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 14ch;
+}
+.ds-glass-hero__sub {
+  font-family: var(--ds-font-body);
+  font-size: 1.05rem;
+  line-height: var(--ds-lh-relaxed);
+  margin: 0;
+  max-width: 56ch;
+  color: var(--ds-ink);
+}
+.ds-glass-hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.ds-glass-hero__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(18rem, 28vw, 24rem);
+}
+
+@media (max-width: 820px) {
+  .ds-glass-hero { grid-template-columns: 1fr; }
+  .ds-glass-hero__media { order: -1; }
+}
+
+/* ================================================================
+   GLASS MODULE GRID — module-card v2 (translucid)
+   ================================================================ */
+.ds-glass-module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 0.75rem;
+}
+.ds-glass-module {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem;
+  border-radius: var(--ds-radius-module);
+  background:
+    var(--ds-glass-highlight),
+    rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: var(--ds-glass-ring), 0 6px 18px -8px rgba(15,4,24,0.15);
+  color: var(--ds-ink-deep);
+  text-decoration: none;
+  transition: transform var(--ds-dur-fast) var(--ds-ease-standard),
+              box-shadow var(--ds-dur-normal) var(--ds-ease-standard);
+}
+.ds-glass-module:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ds-glass-ring), 0 16px 28px -10px var(--brand-glow, rgba(0,0,0,0.18));
+}
+.ds-glass-module__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--ds-font-body);
+  font-size: 0.7rem;
+  font-weight: var(--ds-fw-semibold);
+  letter-spacing: var(--ds-tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ds-ink-muted);
+}
+.ds-glass-module__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background:
+    var(--ds-glass-highlight),
+    linear-gradient(135deg, rgba(255,255,255,0.6) 0%, var(--brand) 100%);
+  box-shadow: var(--ds-glass-ring);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  color: var(--ds-ink-deep);
+}
+.ds-glass-module__title {
+  font-family: var(--ds-font-display);
+  font-size: 1rem;
+  font-weight: var(--ds-fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.ds-glass-module__desc {
+  font-family: var(--ds-font-body);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--ds-ink);
+  margin: 0;
+}
+
+/* ================================================================
+   BRAND OVERRIDES — rotazione e scala della shape per brand.
+   ================================================================ */
+[data-brand="creative-studio"] { --brand-shape-rotation: -12deg; }
+[data-brand="jump"]            { --brand-shape-rotation:   8deg; }
+[data-brand="hive"]            { --brand-shape-rotation:  14deg; }
+[data-brand="willsell"]        { --brand-shape-rotation:  -6deg; }
+[data-brand="dojo"]            { --brand-shape-rotation:   0deg; }
+[data-brand="maindset"]        { --brand-shape-rotation:  -3deg; }
+[data-brand="leadai"]          { --brand-shape-rotation:   6deg; }
+[data-brand="changelab"]       { --brand-shape-rotation: -10deg; }
+[data-brand="liveai-plus"]     { --brand-shape-rotation:   0deg; }
+
+/* ================================================================
+   Reduced motion: niente hover transforms, niente rotation sulla shape.
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .ds-glass-shape { transform: none; transition: none; }
+  .ds-glass-shape:hover { transform: none; }
+  .ds-glass-button:hover { transform: none; }
+  .ds-glass-module:hover { transform: none; }
+}

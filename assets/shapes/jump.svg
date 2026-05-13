@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="JUMP glass shape — J/chair">
+  <defs>
+    <linearGradient id="jp-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="var(--brand-soft, #BEF6D3)" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="var(--brand, #56E3B0)"      stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="var(--brand-deep, #1FBE84)" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="jp-hl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="rgba(255,255,255,0.85)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- J shape: vertical stem + horizontal base curving left -->
+  <path d="M 130 25
+           Q 160 25 160 55
+           L 160 150
+           Q 160 200 110 200
+           L 50 200
+           Q 20 200 20 175
+           Q 20 150 50 150
+           L 100 150
+           Q 120 150 120 130
+           L 120 55
+           Q 120 25 130 25 Z"
+        fill="url(#jp-fill)"/>
+  <path d="M 130 25
+           Q 160 25 160 55
+           L 160 150
+           Q 160 200 110 200
+           L 50 200
+           Q 20 200 20 175
+           Q 20 150 50 150
+           L 100 150
+           Q 120 150 120 130
+           L 120 55
+           Q 120 25 130 25 Z"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+  <path d="M 130 25 Q 160 25 160 55 L 160 110 Q 140 100 120 110 L 120 55 Q 120 25 130 25 Z" fill="url(#jp-hl)" opacity="0.8"/>
+</svg>

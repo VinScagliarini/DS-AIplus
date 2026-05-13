@@ -1,0 +1,104 @@
+{
+  "$schema": "https://design-tokens.org/v1/schema.json",
+  "name": "ai-plus-ecosystem-v2-glass",
+  "description": "Token v2 / brand expansion. Aggiungono il linguaggio glassmorphic + le 'shape' 3D specifiche per brand sopra il sistema v1 (badge a gradient diagonale). Estraibili dai brandboard 2026 (Brand direction/brand espanso/CREATIVE_STUDIO_BrandBoard.ai e assets/glass-logos/*.png).",
+  "version": "2.0.0",
+  "extends": "ecosystem.json",
+
+  "glass": {
+    "tint": {
+      "value": "rgba(255, 255, 255, 0.58)",
+      "type": "color",
+      "description": "Fill condiviso del badge glass v2. Va combinato con backdrop-filter blur."
+    },
+    "tint-strong": {
+      "value": "rgba(255, 255, 255, 0.72)",
+      "type": "color",
+      "description": "Variante più opaca per surfaces che devono garantire leggibilità testuale."
+    },
+    "tint-soft": {
+      "value": "rgba(255, 255, 255, 0.32)",
+      "type": "color",
+      "description": "Variante per overlay / pill su sfondi brand pieni."
+    },
+    "ring": {
+      "value": "inset 0 0 0 1px rgba(255, 255, 255, 0.65)",
+      "type": "shadow",
+      "description": "Bordo interno luminoso che simula lo spessore del vetro."
+    },
+    "ring-dark": {
+      "value": "inset 0 0 0 1px rgba(15, 4, 24, 0.08)",
+      "type": "shadow",
+      "description": "Bordo interno scuro per badge su sfondi chiari."
+    },
+    "highlight": {
+      "value": "linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 55%)",
+      "type": "gradient",
+      "description": "Highlight superiore che simula la curvatura del vetro."
+    },
+    "lowlight": {
+      "value": "linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.25) 100%)",
+      "type": "gradient",
+      "description": "Highlight inferiore (reflection)."
+    },
+    "blur": {
+      "value": "24px",
+      "type": "dimension",
+      "description": "Backdrop-filter blur radius standard."
+    },
+    "blur-strong": {
+      "value": "40px",
+      "type": "dimension"
+    },
+    "shadow-soft": {
+      "value": "0 24px 60px -20px rgba(15, 4, 24, 0.30), 0 8px 18px -8px rgba(15, 4, 24, 0.18)",
+      "type": "shadow",
+      "description": "Drop shadow standard sotto il glass badge."
+    },
+    "shadow-floor": {
+      "value": "0 30px 24px -22px rgba(15, 4, 24, 0.28)",
+      "type": "shadow",
+      "description": "Ground reflection ellisse sotto la 3D shape."
+    },
+    "shadow-brand": {
+      "value": "0 30px 80px -24px var(--brand-glow, rgba(0,0,0,0.25))",
+      "type": "shadow",
+      "description": "Glow brand-aware per emphasized glass surfaces."
+    },
+    "droplet": {
+      "value": "radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.45) 40%, rgba(255,255,255,0.1) 75%, transparent 100%)",
+      "type": "gradient",
+      "description": "Goccia d'acqua decorativa che galleggia accanto alla shape."
+    }
+  },
+
+  "radius": {
+    "glass-card":   { "value": "1.5rem", "type": "borderRadius" },
+    "glass-badge":  { "value": "1.1rem", "type": "borderRadius", "description": "Rounded corner del badge glass (più morbido del card v1)" },
+    "glass-shape":  { "value": "0.8rem", "type": "borderRadius", "description": "Per shape geometriche con corner stondati (es. square Creative Studio)" }
+  },
+
+  "shape-of-brand": {
+    "creative-studio": { "value": "square",  "type": "string", "description": "Frame quadrato glass viola; aspect 1:1." },
+    "jump":            { "value": "chair",   "type": "string", "description": "J/sedia mint; curve a 90°." },
+    "hive":            { "value": "hexagon", "type": "string", "description": "Esagono dorato; ring open al centro." },
+    "willsell":        { "value": "t",       "type": "string", "description": "T-shape cyan; cross-bar in alto." },
+    "dojo":            { "value": "ring",    "type": "string", "description": "Toro giallo; aperto al centro." },
+    "maindset":        { "value": "mwave",   "type": "string", "description": "M-wave viola; doppia onda." },
+    "leadai":          { "value": "e",       "type": "string", "description": "E-shape coral/pink; due bracci paralleli." },
+    "changelab":       { "value": "q",       "type": "string", "description": "Q/curva blu; coda asimmetrica." },
+    "liveai-plus":     { "value": "plus",    "type": "string", "description": "Croce verde; bracci uguali." }
+  },
+
+  "shape-rotation": {
+    "creative-studio": { "value": "-12deg", "type": "string" },
+    "jump":            { "value": "8deg",   "type": "string" },
+    "hive":            { "value": "14deg",  "type": "string" },
+    "willsell":        { "value": "-6deg",  "type": "string" },
+    "dojo":            { "value": "0deg",   "type": "string" },
+    "maindset":        { "value": "-3deg",  "type": "string" },
+    "leadai":          { "value": "6deg",   "type": "string" },
+    "changelab":       { "value": "-10deg", "type": "string" },
+    "liveai-plus":     { "value": "0deg",   "type": "string" }
+  }
+}

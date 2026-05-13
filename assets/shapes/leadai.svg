@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LEADAI glass shape — E">
+  <defs>
+    <linearGradient id="la-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="var(--brand-soft, #F8C2C2)" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="var(--brand, #F0697A)"      stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="var(--brand-deep, #C03245)" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="la-hl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- E shape: vertical spine + 3 horizontal arms (top, mid, bottom) -->
+  <path d="M 35 30
+           Q 20 30 20 45
+           L 20 195
+           Q 20 210 35 210
+           L 195 210
+           Q 210 210 210 195
+           Q 210 180 195 180
+           L 75 180
+           L 75 135
+           L 165 135
+           Q 180 135 180 120
+           Q 180 105 165 105
+           L 75 105
+           L 75 60
+           L 195 60
+           Q 210 60 210 45
+           Q 210 30 195 30 Z"
+        fill="url(#la-fill)"/>
+  <path d="M 35 30
+           Q 20 30 20 45
+           L 20 195
+           Q 20 210 35 210
+           L 195 210
+           Q 210 210 210 195
+           Q 210 180 195 180
+           L 75 180
+           L 75 135
+           L 165 135
+           Q 180 135 180 120
+           Q 180 105 165 105
+           L 75 105
+           L 75 60
+           L 195 60
+           Q 210 60 210 45
+           Q 210 30 195 30 Z"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+  <path d="M 35 30 L 195 30 Q 210 30 210 45 Q 210 60 195 60 L 75 60 L 75 90 Q 50 90 20 90 L 20 45 Q 20 30 35 30 Z"
+        fill="url(#la-hl)" opacity="0.7"/>
+</svg>

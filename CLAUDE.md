@@ -141,6 +141,53 @@ html[data-theme="dark"] {
 Mantieni i gradient hero così come sono (sono già pensati per terminare
 sul brand color saturato e leggono bene su entrambe le superfici).
 
+## V2 / brand expansion (glass + 3D shape)
+
+Da maggio 2026 il sistema ha una **seconda voce v2** che convive con la v1
+(non la sostituisce). Sorgenti: `Brand direction/brand espanso/CREATIVE_STUDIO_BrandBoard.ai`
++ `Brand direction/assets/glass-logos/*.png` (entrambi nella cartella OneDrive
+di lavoro — la cartella `Brand direction/` NON è nel repo).
+
+**Tre ingredienti v2:**
+
+1. **Glass badge** — `.ds-glass-badge`, pill rounded translucida con highlight
+   superiore, brand-soft di fondo, soft shadow.
+2. **3D shape brand-specific** — `.ds-glass-shape` con `<svg><use href="assets/shapes/sprite.svg#shape-<slug>"/></svg>`.
+   Mapping fisso: creative-studio=square, jump=chair/J, hive=hexagon,
+   willsell=T, dojo=ring, maindset=M-wave, leadai=E, changelab=Q,
+   liveai-plus=plus. **Non scambiare le shape.**
+3. **Glassmorphic surfaces** — `.ds-glass-card`, `.ds-glass-module`,
+   `.ds-glass-button`, `.ds-glass-pill` con `backdrop-filter: blur()`,
+   inset ring, drop shadow brand-aware.
+
+**Setup pagina v2:**
+
+```html
+<html data-brand="creative-studio">
+<link rel="stylesheet" href="styles/index.css" />
+<link rel="stylesheet" href="styles/v2.css" />
+<script src="scripts/glass-shape.js" defer></script>
+```
+
+`scripts/glass-shape.js` inietta lo sprite SVG inline (necessario perché
+`<use href="external.svg#id"/>` non eredita CSS variables su tutti i browser).
+
+**Quando usare v2 vs v1:**
+
+- v2 = touchpoint marca/storia (cover, hero, landing, ecosystem map).
+- v1 = pagine dense di testo / documentazione / dashboard moduli.
+- v2 è additiva: la topbar dark, l'eco-rail, le pill di status, il
+  section-header restano i pattern v1.
+
+**Don't (v2-specifici):**
+
+- Niente `.ds-glass-*` su body text lungo (blur degrada la leggibilità).
+- Niente shape mischiate tra brand.
+- Niente `--ds-glass-blur` sotto 12px.
+
+File chiave: `tokens/glass.json`, `styles/v2.css`, `assets/shapes/`,
+`scripts/glass-shape.js`, `examples/v2-*.html`, `docs/usage-v2.md`.
+
 ## Tono di voce per le copy generate
 
 Italiano, diretto, evita gergo americano in copertina. Frasi corte.

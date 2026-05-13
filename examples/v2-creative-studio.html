@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="it" data-brand="creative-studio">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CREATIVE STUDIO · v2 — AI+ Ecosystem · Logotel</title>
+<meta name="description" content="Vetrina v2 / brand expansion del brand CREATIVE STUDIO. Glass badge, shape 3D, glassmorphic surfaces." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300..700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/index.css" />
+<link rel="stylesheet" href="../styles/v2.css" />
+<script src="../scripts/glass-shape.js" defer></script>
+<style>
+  body {
+    margin: 0;
+    background: var(--ds-cream);
+    color: var(--ds-ink);
+    font-family: var(--ds-font-body);
+  }
+  .ds-eco-rail {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.6rem clamp(1rem, 2vw, 1.5rem);
+    background: var(--ds-paper);
+    border-bottom: 1px solid var(--ds-line);
+    font-size: 0.78rem;
+  }
+  .ds-eco-link {
+    text-decoration: none;
+    color: var(--ds-ink-muted);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background 120ms, color 120ms;
+  }
+  .ds-eco-link:hover { color: var(--ds-ink-deep); background: var(--ds-cream); }
+  .ds-eco-link[data-active="1"] { background: var(--brand-soft); color: var(--ds-ink-deep); }
+  .v2-shell {
+    max-width: 88rem;
+    margin: 0 auto;
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    display: grid;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+  .ds-on-air {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .ds-on-air__label {
+    font-family: var(--ds-font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: var(--ds-tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--ds-ink-muted);
+  }
+  .v2-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: clamp(0.75rem, 1.5vw, 1rem);
+  }
+  .v2-section-title {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--ds-line);
+    margin-top: 1rem;
+  }
+  .v2-section-title h2 {
+    font-family: var(--ds-font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--ds-ink-deep);
+  }
+  .v2-section-title small {
+    font-family: var(--ds-font-body);
+    font-size: var(--ds-fs-small);
+    color: var(--ds-ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .v2-big-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+
+  <header class="ds-topbar">
+    <div class="ds-topbar__brand">
+      CREATIVE STUDIO<sup>AI+</sup>
+      <span class="ds-topbar__tag">v2 · brand expansion</span>
+    </div>
+    <nav class="ds-topbar__nav">
+      <a href="./v2-index.html" class="ds-topbar__cta">↩ V2 ECOSYSTEM</a>
+      <a href="./creative-studio.html" class="ds-topbar__cta" style="background:transparent;color:var(--ds-cream);border-color:rgba(247,246,243,0.4)">Vai a v1</a>
+      <span class="ds-topbar__powered">powered by logotel</span>
+    </nav>
+  </header>
+
+  <nav class="ds-eco-rail">
+    <a href="./v2-index.html" class="ds-eco-link" style="color: var(--ds-ink-deep);">↩ Ecosystem v2</a>
+    <a href="./v2-index.html#jump" class="ds-eco-link">JUMP</a>
+    <a href="./v2-index.html#hive" class="ds-eco-link">HIVE</a>
+    <a href="./v2-index.html#willsell" class="ds-eco-link">WILLSELL</a>
+    <a href="./v2-index.html#dojo" class="ds-eco-link">DOJO</a>
+    <a href="./v2-creative-studio.html" class="ds-eco-link" data-active="1">CREATIVE STUDIO</a>
+    <a href="./v2-index.html#maindset" class="ds-eco-link">MAINDSET</a>
+    <a href="./v2-index.html#leadai" class="ds-eco-link">LEADAI</a>
+    <a href="./v2-index.html#changelab" class="ds-eco-link">CHANGELAB</a>
+    <a href="./v2-index.html#liveai-plus" class="ds-eco-link">LIVE AI+</a>
+  </nav>
+
+  <main class="v2-shell">
+
+    <!-- HERO v2 -->
+    <article class="ds-glass-hero">
+      <div class="ds-glass-hero__body">
+        <span class="ds-glass-hero__eyebrow">CREATIVE PRODUCTION · v2</span>
+        <h1 class="ds-glass-hero__title">Creatività alla velocità degli algoritmi.</h1>
+        <p class="ds-glass-hero__sub">
+          CREATIVE STUDIO trasforma una brief in statiche, video, UGC on-brand — ovunque, in pochi secondi. Il nuovo linguaggio v2 introduce volume, vetro e una palette più morbida sui touchpoint dimostrativi.
+        </p>
+        <div class="ds-on-air">
+          <span class="ds-glass-pill"><span class="ds-glass-pill__dot"></span>ON AIR</span>
+          <span class="ds-on-air__label">CS · creative ops in produzione</span>
+        </div>
+        <div class="ds-glass-hero__actions">
+          <a class="ds-glass-button ds-glass-button--brand" href="#">Apri il prototipo →</a>
+          <a class="ds-glass-button" href="./creative-studio.html">Confronta v1</a>
+        </div>
+      </div>
+      <div class="ds-glass-hero__media">
+        <div class="ds-glass-lockup">
+          <div class="ds-glass-shape" aria-hidden="true">
+            <svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-creative-studio"/></svg>
+            <span class="ds-glass-shape__droplet" aria-hidden="true"></span>
+          </div>
+          <div class="ds-glass-badge">
+            <div class="ds-glass-badge__wordmark">CREATIVE<br/>STUDIO</div>
+            <div class="ds-glass-badge__footer">
+              <span class="ds-glass-badge__aiplus">AI+</span>
+              <span class="ds-glass-badge__powered">
+                <span>powered by</span>
+                <span>logotel</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- BIG CARD glass (modulo principale) -->
+    <section class="ds-glass-card ds-glass-card--brand v2-big-card">
+      <div class="ds-glass-shape" style="width:6.5rem;height:6.5rem;flex:none;" aria-hidden="true">
+        <svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-creative-studio"/></svg>
+      </div>
+      <div>
+        <p class="ds-glass-card__eyebrow">CS · 01 — Storyboard generator</p>
+        <h3 class="ds-glass-card__title">Da brief a 12 frame in 30 secondi.</h3>
+        <p class="ds-glass-card__desc">Trasforma una brief testuale in storyboard cinematografico già impaginato — pronto per la review del cliente.</p>
+      </div>
+      <a class="ds-glass-button ds-glass-button--ink" href="#">Apri prototipo →</a>
+    </section>
+
+    <!-- SECTION HEADER -->
+    <div class="v2-section-title">
+      <h2>Moduli Creative Studio v2</h2>
+      <small>6 moduli · linguaggio glass</small>
+    </div>
+
+    <!-- MODULE GRID glass -->
+    <section class="ds-glass-module-grid">
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 02</span><span class="ds-glass-module__icon">▭</span></div>
+        <h4 class="ds-glass-module__title">Static asset factory</h4>
+        <p class="ds-glass-module__desc">Genera 50 statiche on-brand da una sola base creativa.</p>
+      </a>
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 03</span><span class="ds-glass-module__icon">◍</span></div>
+        <h4 class="ds-glass-module__title">UGC scriptwriter</h4>
+        <p class="ds-glass-module__desc">Script in stile creator-economy, vincoli di piattaforma inclusi.</p>
+      </a>
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 04</span><span class="ds-glass-module__icon">▣</span></div>
+        <h4 class="ds-glass-module__title">Cinematic video</h4>
+        <p class="ds-glass-module__desc">Da prompt a 30 secondi cinematici, format multi-canale.</p>
+      </a>
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 05</span><span class="ds-glass-module__icon">◆</span></div>
+        <h4 class="ds-glass-module__title">Brand voice lock</h4>
+        <p class="ds-glass-module__desc">Allinea tone of voice & lessico a ogni canale.</p>
+      </a>
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 06</span><span class="ds-glass-module__icon">◧</span></div>
+        <h4 class="ds-glass-module__title">Variants engine</h4>
+        <p class="ds-glass-module__desc">A/B + lingua + claim, in batch.</p>
+      </a>
+      <a class="ds-glass-module" href="#">
+        <div class="ds-glass-module__head"><span>CS · 07</span><span class="ds-glass-module__icon">⌬</span></div>
+        <h4 class="ds-glass-module__title">Asset review hub</h4>
+        <p class="ds-glass-module__desc">Pipeline di approvazione con commenti time-stamped.</p>
+      </a>
+    </section>
+
+    <!-- COMPONENT SAMPLER -->
+    <div class="v2-section-title">
+      <h2>Component sampler</h2>
+      <small>variants disponibili in styles/v2.css</small>
+    </div>
+    <section class="ds-glass-module-grid">
+      <article class="ds-glass-card">
+        <p class="ds-glass-card__eyebrow">Pills</p>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+          <span class="ds-glass-pill"><span class="ds-glass-pill__dot"></span>ON AIR</span>
+          <span class="ds-glass-pill"><span class="ds-glass-pill__dot" style="background:var(--ds-ink-deep)"></span>BETA</span>
+          <span class="ds-glass-pill">Generic</span>
+        </div>
+      </article>
+      <article class="ds-glass-card ds-glass-card--soft">
+        <p class="ds-glass-card__eyebrow">Buttons</p>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <a class="ds-glass-button" href="#">Default</a>
+          <a class="ds-glass-button ds-glass-button--brand" href="#">Brand</a>
+          <a class="ds-glass-button ds-glass-button--ink" href="#">Ink</a>
+        </div>
+      </article>
+      <article class="ds-glass-card ds-glass-card--strong">
+        <p class="ds-glass-card__eyebrow">Card · strong</p>
+        <h3 class="ds-glass-card__title">Glass strong</h3>
+        <p class="ds-glass-card__desc">Variante più opaca per superfici che ospitano testo lungo.</p>
+      </article>
+    </section>
+
+    <footer style="margin-top:2rem;padding:1.5rem 0;color:var(--ds-ink-muted);font-size:0.78rem;border-top:1px solid var(--ds-line);">
+      AI+ Ecosystem · v2 / brand expansion · powered by logotel
+    </footer>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="HIVE glass shape — hexagon ring">
+  <defs>
+    <linearGradient id="hv-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="var(--brand-soft, #FAD08E)" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="var(--brand, #FDB84B)"      stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="var(--brand-deep, #E08A1A)" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="hv-hl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon ring: outer + inner hole -->
+  <path d="M 120 15 L 213 70 L 213 170 L 120 225 L 27 170 L 27 70 Z
+           M 120 55 L 180 90 L 180 150 L 120 185 L 60 150 L 60 90 Z"
+        fill="url(#hv-fill)" fill-rule="evenodd"/>
+  <path d="M 120 15 L 213 70 L 213 170 L 120 225 L 27 170 L 27 70 Z
+           M 120 55 L 180 90 L 180 150 L 120 185 L 60 150 L 60 90 Z"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill-rule="evenodd"/>
+  <path d="M 120 15 L 213 70 L 213 115 Q 165 90 120 95 Q 75 90 27 115 L 27 70 Z" fill="url(#hv-hl)" opacity="0.7"/>
+</svg>

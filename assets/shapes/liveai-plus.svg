@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="LIVE AI+ glass shape — plus cross">
+  <defs>
+    <linearGradient id="lp-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="var(--brand-soft, #C7F0B8)" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="var(--brand, #6BD744)"      stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="var(--brand-deep, #338A0F)" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="lp-hl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="rgba(255,255,255,0.9)"/>
+      <stop offset="55%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- Plus: two intersecting rounded rectangles -->
+  <path d="M 95 25
+           Q 80 25 80 40
+           L 80 80
+           L 40 80
+           Q 25 80 25 95
+           L 25 145
+           Q 25 160 40 160
+           L 80 160
+           L 80 200
+           Q 80 215 95 215
+           L 145 215
+           Q 160 215 160 200
+           L 160 160
+           L 200 160
+           Q 215 160 215 145
+           L 215 95
+           Q 215 80 200 80
+           L 160 80
+           L 160 40
+           Q 160 25 145 25 Z"
+        fill="url(#lp-fill)"/>
+  <path d="M 95 25
+           Q 80 25 80 40
+           L 80 80
+           L 40 80
+           Q 25 80 25 95
+           L 25 145
+           Q 25 160 40 160
+           L 80 160
+           L 80 200
+           Q 80 215 95 215
+           L 145 215
+           Q 160 215 160 200
+           L 160 160
+           L 200 160
+           Q 215 160 215 145
+           L 215 95
+           Q 215 80 200 80
+           L 160 80
+           L 160 40
+           Q 160 25 145 25 Z"
+        fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+  <path d="M 95 25 L 145 25 Q 160 25 160 40 L 160 80 L 200 80 Q 215 80 215 95 L 215 115 Q 175 105 160 110 L 160 80 L 80 80 L 80 110 Q 50 105 25 115 L 25 95 Q 25 80 40 80 L 80 80 L 80 40 Q 80 25 95 25 Z"
+        fill="url(#lp-hl)" opacity="0.7"/>
+</svg>
