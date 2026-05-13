@@ -11,7 +11,13 @@ MuseoModerno + Roboto, lockup `AI+` e `powered by logotel`).
 
 ![AI+ Ecosystem umbrella](docs/_assets/umbrella-preview.png)
 
-> Anteprima: apri `examples/index.html` nel browser.
+> **Anteprima**: apri [`index.html`](./index.html) nel browser (home),
+> oppure direttamente [`examples/v2-index.html`](./examples/v2-index.html)
+> per la **v2 / brand expansion** (glass badges, monogrammi, 9 vetrine
+> brand complete con style guide).
+>
+> **Online**: una volta abilitato GitHub Pages, le pagine vivono su
+> `https://vinscagliarini.github.io/DS-AIplus/`.
 
 ## Cosa c'è dentro
 
@@ -111,8 +117,47 @@ import creativeStudio from "ai-plus-ecosystem-ds/tokens/brands/creative-studio.j
 | **CHANGELAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/changelab.md) |
 | **LIVE AI+** | lime | `#BBF0AD` | `#95EC80` | [→](docs/brands/liveai-plus.md) |
 
+## V2 · Brand expansion (2026)
+
+Seconda voce del DS, additiva, attivabile con `data-ds-version="2"` e
+`class="brand-<slug>"`. Introduce:
+
+- **Glass badge** (`.ds-glass-badge`) — pill rounded translucida con
+  highlight, brand-soft + brand saturated gradient
+- **Monogram** 2-char (es. `TI` per Creative Studio, `JM` per Jump…)
+- **9 vetrine brand complete** in [`examples/v2-<slug>.html`](./examples/)
+  — heading card, navigation, stat card, carousel card, image card,
+  stack card, hero ink, button system + **style guide** (gradients,
+  radii, shadows, spacing, stats, copy & voice) + lista degli stili
+  attivi per ogni brand.
+- **Umbrella v2** in [`examples/v2-index.html`](./examples/v2-index.html)
+  con griglia 3×3 dei 9 brand, ognuno cliccabile.
+
+File chiave: [`styles/v2.css`](./styles/v2.css),
+[`tokens/glass.json`](./tokens/glass.json),
+[`scripts/generate_v2_examples.py`](./scripts/generate_v2_examples.py),
+[`docs/usage-v2.md`](./docs/usage-v2.md).
+
+Rigenerare le vetrine: `python3 scripts/generate_v2_examples.py`.
+
+## Online (GitHub Pages)
+
+Il repo è 100% statico (no build step). Per abilitare GitHub Pages:
+
+1. Vai su https://github.com/VinScagliarini/DS-AIplus/settings/pages
+2. Sezione **"Build and deployment"** → **Source**: scegli `Deploy from a branch`
+3. **Branch**: `main`, **Folder**: `/ (root)`, premi **Save**
+4. Dopo ~1 minuto il sito è disponibile su
+   `https://vinscagliarini.github.io/DS-AIplus/`
+   - Home: `/` (redirect alla v2)
+   - V2 umbrella: `/examples/v2-index.html`
+   - V1 umbrella: `/examples/index.html`
+
+Ogni push su `main` ridistribuisce automaticamente.
+
 ## Documentazione
 
+- [`docs/usage-v2.md`](docs/usage-v2.md) — guida v2 / brand expansion
 - [`docs/brands.md`](docs/brands.md) — indice brand + selezione brand
 - [`docs/typography.md`](docs/typography.md) — MuseoModerno + Roboto, type scale
 - [`docs/color.md`](docs/color.md) — neutrali, brand-aware, gradient

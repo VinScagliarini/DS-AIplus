@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI+ Ecosystem · Design System</title>
+<meta name="description" content="AI+ Ecosystem Design System (Logotel). 9 brand verticali, sistema condiviso, due voci v1 + v2 / brand expansion." />
+<link rel="canonical" href="./examples/v2-index.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300..700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/index.css" />
+<style>
+  body {
+    margin: 0; min-height: 100vh;
+    background: var(--ds-cream);
+    color: var(--ds-ink);
+    font-family: var(--ds-font-body);
+    display: grid; place-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  .home {
+    max-width: 40rem;
+    text-align: center;
+    display: grid; gap: 1rem;
+  }
+  .home__eyebrow {
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ds-ink-muted);
+  }
+  .home__title {
+    font-family: var(--ds-font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1; letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--ds-ink-deep);
+  }
+  .home__sub {
+    font-size: 1rem; line-height: 1.6;
+    max-width: 50ch; margin: 0 auto;
+    color: var(--ds-ink);
+  }
+  .home__actions { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap; }
+  .home__btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 9999px;
+    background: var(--ds-ink-deep);
+    color: var(--ds-cream);
+    font-family: var(--ds-font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .home__btn--ghost {
+    background: transparent;
+    color: var(--ds-ink-deep);
+    border: 1.5px solid var(--ds-ink-deep);
+  }
+  .home__foot { margin-top: 2rem; font-size: 0.75rem; color: var(--ds-ink-muted); }
+</style>
+</head>
+<body>
+  <main class="home">
+    <span class="home__eyebrow">AI+ Ecosystem · powered by Logotel</span>
+    <h1 class="home__title">Design System</h1>
+    <p class="home__sub">
+      Nove brand verticali — Jump, Hive, WillSell, Dojo, Creative Studio, Maindset, LeadAI, ChangeLab, Live AI+ —
+      sotto un unico sistema. Due voci: <strong>v1</strong> editoriale, <strong>v2</strong> glass / brand expansion.
+    </p>
+    <div class="home__actions">
+      <a class="home__btn" href="./examples/v2-index.html">v2 · Brand expansion →</a>
+      <a class="home__btn home__btn--ghost" href="./examples/index.html">v1 · Original</a>
+    </div>
+    <p class="home__foot">
+      <a href="./docs/usage-v2.md" style="color:inherit">Docs v2</a> ·
+      <a href="./README.md" style="color:inherit">README</a> ·
+      <a href="https://github.com/VinScagliarini/DS-AIplus" style="color:inherit">GitHub</a>
+    </p>
+  </main>
+</body>
+</html>

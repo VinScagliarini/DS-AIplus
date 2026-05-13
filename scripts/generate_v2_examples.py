@@ -15,12 +15,13 @@ REPO = Path(__file__).resolve().parent.parent
 INDEX = json.loads((REPO / "tokens" / "index.json").read_text(encoding="utf-8"))
 BRANDS_INFO = {b["slug"]: b for b in INDEX["brands"]}
 
-# Pexels URLs (statici, CC0). Sostituibili per brand se serve un mood diverso.
+# Foto in repo (originali da Pexels.com, CC0). Path relativi al file
+# examples/v2-<slug>.html. Sorgenti documentati in assets/photos/README.md.
 PEXELS_DEFAULT = {
-    "image_card":   "https://images.pexels.com/photos/3585047/pexels-photo-3585047.jpeg?auto=compress&cs=tinysrgb&w=900",
-    "stack_top":    "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    "stack_bottom": "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    "hero_ink":     "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "image_card":   "../assets/photos/image-card.jpg",
+    "stack_top":    "../assets/photos/stack-top.jpg",
+    "stack_bottom": "../assets/photos/stack-bottom.jpg",
+    "hero_ink":     "../assets/photos/hero-ink.jpg",
 }
 
 # Copy per brand. Heading/carousel/image/split/hero hanno volutamente
