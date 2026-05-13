@@ -78,15 +78,15 @@
       "glass": "assets/glass-logos/leadai.png"
     },
     {
-      "slug": "changelab",
+      "slug": "reframing-lab",
       "name": "REFRAMING LAB",
       "tagline": "Cambiamento progettato come un esperimento.",
       "primary": "#568BFF",
       "soft": "#95B5FA",
-      "tokens": "tokens/brands/changelab.json",
-      "css": "styles/brands/changelab.css",
-      "badge": "assets/badges/changelab.png",
-      "glass": "assets/glass-logos/changelab.png"
+      "tokens": "tokens/brands/reframing-lab.json",
+      "css": "styles/brands/reframing-lab.css",
+      "badge": "assets/badges/reframing-lab.png",
+      "glass": "assets/glass-logos/reframing-lab.png"
     },
     {
       "slug": "liveai-plus",

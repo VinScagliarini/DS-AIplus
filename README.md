@@ -78,7 +78,7 @@ python3 -m http.server 8000
 
 Cambia il brand modificando `data-brand="..."` (`jump`, `hive`,
 `willsell`, `dojo`, `creative-studio`, `maindset`, `leadai`,
-`changelab`, `liveai-plus`).
+`reframing-lab`, `liveai-plus`).
 
 ### Tailwind
 
@@ -114,7 +114,7 @@ import creativeStudio from "ai-plus-ecosystem-ds/tokens/brands/creative-studio.j
 | **CREATIVE STUDIO** | magenta | `#F0BEF7` | `#D464F0` | [→](docs/brands/creative-studio.md) |
 | **MAINDSET** | violet | `#BFB8FA` | `#968CFF` | [→](docs/brands/maindset.md) |
 | **LEADAI** | coral | `#F4ABA6` | `#F2746F` | [→](docs/brands/leadai.md) |
-| **REFRAMING LAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/changelab.md) |
+| **REFRAMING LAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/reframing-lab.md) |
 | **LIVE AI+** | lime | `#BBF0AD` | `#95EC80` | [→](docs/brands/liveai-plus.md) |
 
 ## V2 · Brand expansion (2026)

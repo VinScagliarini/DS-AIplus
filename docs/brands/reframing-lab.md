@@ -2,9 +2,9 @@
 
 > Cambiamento progettato come un esperimento.
 
-**Slug:** `changelab` · **Hue:** blue
+**Slug:** `reframing-lab` · **Hue:** blue
 
-![Badge](../../assets/badges/changelab.png)
+![Badge](../../assets/badges/reframing-lab.png)
 
 ## Token chiave
 
@@ -33,7 +33,7 @@ background: linear-gradient(180deg, #0F1B3A 0%, #080F22 100%);
 
 ```html
 <!-- Imposta il brand sull'<html> o su qualsiasi wrapper -->
-<html data-brand="changelab">
+<html data-brand="reframing-lab">
   <link rel="stylesheet" href="styles/index.css" />
   ...
   <header class="ds-hero">
@@ -55,10 +55,10 @@ background: linear-gradient(180deg, #0F1B3A 0%, #080F22 100%);
 
 ## Asset
 
-- `assets/badges/changelab.png` — badge AI+ (1:1, 616x616)
-- `assets/glass-logos/changelab.png` — glass logo 3D
-- `tokens/brands/changelab.json` — tutti i token in formato design-tokens
-- `styles/brands/changelab.css` — custom property pronte all'uso
+- `assets/badges/reframing-lab.png` — badge AI+ (1:1, 616x616)
+- `assets/glass-logos/reframing-lab.png` — glass logo 3D
+- `tokens/brands/reframing-lab.json` — tutti i token in formato design-tokens
+- `styles/brands/reframing-lab.css` — custom property pronte all'uso
 
 ## Quando usare REFRAMING LAB
 

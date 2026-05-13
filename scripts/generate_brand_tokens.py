@@ -86,7 +86,7 @@ BRANDS = {
         "ink":    "#3A1A1A",
         "ink_deep":"#181818",
     },
-    "changelab": {
+    "reframing-lab": {
         "name": "REFRAMING LAB",
         "tagline": "Cambiamento progettato come un esperimento.",
         "hue_name": "blue",

@@ -128,7 +128,7 @@ COPY = {
         ],
         "stat": ("2.3x", "conversion rate sui lead inbound qualificati con LEADAI"),
     },
-    "changelab": {
+    "reframing-lab": {
         "tag": "Change as Experiment",
         "eyebrow": "CHANGE AS EXPERIMENT · POWERED BY LOGOTEL",
         "title": "Cambiamento progettato come un esperimento.",
@@ -163,7 +163,7 @@ COPY = {
 }
 
 ECOSYSTEM_NAV = ["jump", "hive", "willsell", "dojo", "creative-studio",
-                 "maindset", "leadai", "changelab", "liveai-plus"]
+                 "maindset", "leadai", "reframing-lab", "liveai-plus"]
 
 
 def render_topbar(active: str) -> str:

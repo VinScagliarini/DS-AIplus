@@ -24,7 +24,7 @@ si differenziano per **hue brand** e posizionamento.
 | [CREATIVE STUDIO](./brands/creative-studio.md) | magenta | `#F0BEF7` | `#D464F0` | Creative production |
 | [MAINDSET](./brands/maindset.md) | violet | `#BFB8FA` | `#968CFF` | AI culture |
 | [LEADAI](./brands/leadai.md) | coral | `#F4ABA6` | `#F2746F` | AI lead generation |
-| [REFRAMING LAB](./brands/changelab.md) | blue | `#95B5FA` | `#568BFF` | Change as experiment |
+| [REFRAMING LAB](./brands/reframing-lab.md) | blue | `#95B5FA` | `#568BFF` | Change as experiment |
 | [LIVE AI+](./brands/liveai-plus.md) | lime | `#BBF0AD` | `#95EC80` | Live experience |
 
 ## Come selezionare un brand

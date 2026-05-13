@@ -48,7 +48,7 @@ funzionare.
 | `dojo`            | ring        | yellow      |
 | `maindset`        | M-wave      | violet      |
 | `leadai`          | E           | coral       |
-| `changelab`       | Q           | blue        |
+| `reframing-lab`       | Q           | blue        |
 | `liveai-plus`     | plus        | green       |
 
 Definita in `tokens/glass.json#shape-of-brand` e nel sprite

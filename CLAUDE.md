@@ -9,7 +9,7 @@ con il design system **AI+ Ecosystem** di Logotel.
 - Umbrella brand: **AI+ Ecosystem** (powered by Logotel).
 - 9 brand verticali, slug:
   `jump`, `hive`, `willsell`, `dojo`, `creative-studio`, `maindset`,
-  `leadai`, `changelab`, `liveai-plus`.
+  `leadai`, `reframing-lab`, `liveai-plus`.
 - Tutti condividono: badge a gradient diagonale 135°, tipografia
   MuseoModerno (display) + Roboto (body), lockup `AI+` e `powered by
   logotel`, palette a 5 step con cream condiviso `#F7F6F3` come
@@ -154,7 +154,7 @@ di lavoro — la cartella `Brand direction/` NON è nel repo).
    superiore, brand-soft di fondo, soft shadow.
 2. **3D shape brand-specific** — `.ds-glass-shape` con `<svg><use href="assets/shapes/sprite.svg#shape-<slug>"/></svg>`.
    Mapping fisso: creative-studio=square, jump=chair/J, hive=hexagon,
-   willsell=T, dojo=ring, maindset=M-wave, leadai=E, changelab=Q,
+   willsell=T, dojo=ring, maindset=M-wave, leadai=E, reframing-lab=Q,
    liveai-plus=plus. **Non scambiare le shape.**
 3. **Glassmorphic surfaces** — `.ds-glass-card`, `.ds-glass-module`,
    `.ds-glass-button`, `.ds-glass-pill` con `backdrop-filter: blur()`,

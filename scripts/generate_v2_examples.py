@@ -164,7 +164,7 @@ CONTENT = {
         "hero_sub":  "Briefing su misura, scenari pre-calcolati, recap delle riunioni. Il tempo del leader torna a essere su persone e visione.",
         "hero_cta":  "Start leading",
     },
-    "changelab": {
+    "reframing-lab": {
         "wordmark":  "REFRAMING<br/>LAB",
         "tag":       "Change ops",
         "heading_h": "Il cambiamento, come un laboratorio.",
@@ -715,7 +715,7 @@ SHAPE_KIND = {
     "dojo":            "torus / ring",
     "maindset":        "M wave",
     "leadai":          "E",
-    "changelab":       "Q",
+    "reframing-lab":       "Q",
     "liveai-plus":     "plus / cross",
 }
 
@@ -728,7 +728,7 @@ MONOGRAM = {
     "dojo":            "DJ",
     "maindset":        "MS",
     "leadai":          "LA",
-    "changelab":       "RL",
+    "reframing-lab":       "RL",
     "liveai-plus":     "L+",
 }
 

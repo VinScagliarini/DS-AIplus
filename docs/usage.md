@@ -25,7 +25,7 @@
 
 Per cambiare brand basta modificare l'attributo `data-brand` (`jump`,
 `hive`, `willsell`, `dojo`, `creative-studio`, `maindset`, `leadai`,
-`changelab`, `liveai-plus`).
+`reframing-lab`, `liveai-plus`).
 
 ### 2. Tailwind preset
 

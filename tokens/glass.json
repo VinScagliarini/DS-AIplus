@@ -115,7 +115,7 @@
     "dojo":            { "value": "ring",    "type": "string", "description": "Toro giallo; aperto al centro." },
     "maindset":        { "value": "mwave",   "type": "string", "description": "M-wave viola; doppia onda." },
     "leadai":          { "value": "e",       "type": "string", "description": "E-shape coral/pink; due bracci paralleli." },
-    "changelab":       { "value": "q",       "type": "string", "description": "Q/curva blu; coda asimmetrica." },
+    "reframing-lab":       { "value": "q",       "type": "string", "description": "Q/curva blu; coda asimmetrica." },
     "liveai-plus":     { "value": "plus",    "type": "string", "description": "Croce verde; bracci uguali." }
   },
 
@@ -127,7 +127,7 @@
     "dojo":            { "value": "0deg",   "type": "string" },
     "maindset":        { "value": "-3deg",  "type": "string" },
     "leadai":          { "value": "6deg",   "type": "string" },
-    "changelab":       { "value": "-10deg", "type": "string" },
+    "reframing-lab":       { "value": "-10deg", "type": "string" },
     "liveai-plus":     { "value": "0deg",   "type": "string" }
   }
 }
