@@ -378,7 +378,7 @@ TEMPLATE = """<!doctype html>
           <div class="ds-glass-image-card__bg">
             <img src="{img_url}" alt="" loading="lazy" />
           </div>
-          <h3 class="ds-glass-image-card__title">{image_t_html}</h3>
+          <h3 class="ds-glass-image-card__title">{image_t}</h3>
           <div class="ds-glass-image-card__footer">
             <span class="ds-glass-image-card__wordmark">{wordmark}</span>
             <a class="ds-glass-image-card__cta" href="#">{image_cta}</a>
@@ -398,9 +398,11 @@ TEMPLATE = """<!doctype html>
         </div>
       </div>
       <div class="ds-glass-stack-card__bottom">
-        <img src="{stack_bottom_url}" alt="" loading="lazy" />
+        <div class="ds-glass-stack-card__bottom-media">
+          <img src="{stack_bottom_url}" alt="" loading="lazy" />
+        </div>
+        <a class="ds-glass-stack-card__pill" href="#">{split_cta}</a>
       </div>
-      <a class="ds-glass-stack-card__pill" href="#">{split_cta}</a>
     </section>
 
     <!-- HERO INK -->
@@ -582,7 +584,7 @@ def render(slug: str) -> str:
         stat_n=c["stat_n"],
         stat_lbl=c["stat_lbl"],
         stat_src=c["stat_src"],
-        image_t_html=highlight_lines(c["image_t"]),
+        image_t=c["image_t"],
         image_cta=c["image_cta"],
         split_eb=c["split_eb"],
         split_txt=c["split_txt"],
