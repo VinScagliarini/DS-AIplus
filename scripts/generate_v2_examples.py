@@ -15,14 +15,19 @@ REPO = Path(__file__).resolve().parent.parent
 INDEX = json.loads((REPO / "tokens" / "index.json").read_text(encoding="utf-8"))
 BRANDS_INFO = {b["slug"]: b for b in INDEX["brands"]}
 
-# Foto in repo (originali da Pexels.com, CC0). Path relativi al file
-# examples/v2-<slug>.html. Sorgenti documentati in assets/photos/README.md.
-PEXELS_DEFAULT = {
-    "image_card":   "../assets/photos/image-card.jpg",
-    "stack_top":    "../assets/photos/stack-top.jpg",
-    "stack_bottom": "../assets/photos/stack-bottom.jpg",
-    "hero_ink":     "../assets/photos/hero-ink.jpg",
-}
+# Foto brand-aware (originali da Pexels.com, CC0). Path relativi a
+# examples/v2-<slug>.html. Tematiche scelte dai prodotti AI+:
+# jump=team brainstorming, hive=network, willsell=sales,
+# dojo=mobile learning, creative-studio=design tablet,
+# maindset=sticky notes, leadai=executive, reframing-lab=lab,
+# liveai-plus=conference stage. Credits in assets/photos/README.md.
+def _photos(slug):
+    return {
+        "image_card":   f"../assets/photos/{slug}/image-card.jpg",
+        "stack_top":    f"../assets/photos/{slug}/stack-top.jpg",
+        "stack_bottom": f"../assets/photos/{slug}/stack-top.jpg",   # legacy alias
+        "hero_ink":     f"../assets/photos/{slug}/hero-ink.jpg",
+    }
 
 # Copy per brand. Heading/carousel/image/split/hero hanno volutamente
 # struttura simile a Creative Studio (brandboard 2026) per consistenza.
@@ -797,10 +802,10 @@ def render(slug: str) -> str:
         hero_t=c["hero_t"],
         hero_sub=c["hero_sub"],
         hero_cta=c["hero_cta"],
-        img_url=PEXELS_DEFAULT["image_card"],
-        stack_top_url=PEXELS_DEFAULT["stack_top"],
-        stack_bottom_url=PEXELS_DEFAULT["stack_bottom"],
-        hero_url=PEXELS_DEFAULT["hero_ink"],
+        img_url=_photos(slug)["image_card"],
+        stack_top_url=_photos(slug)["stack_top"],
+        stack_bottom_url=_photos(slug)["stack_bottom"],
+        hero_url=_photos(slug)["hero_ink"],
         hex_bg_start=pal["bg_start"],   hex_bg_start_label=pal["bg_start"].upper().lstrip("#"),
         hex_soft=pal["soft"],           hex_soft_label=pal["soft"].upper().lstrip("#"),
         hex_primary=pal["primary"],     hex_primary_label=pal["primary"].upper().lstrip("#"),
