@@ -214,7 +214,7 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{name} · v2 — AI+ Ecosystem · Logotel</title>
-<meta name="description" content="Vetrina v2 / brand expansion del brand {name}: heading, nav, stat, carousel, image card, split, hero ink, buttons, palette, stili." />
+<meta name="description" content="Vetrina v2 / logotel AI+ Solutions del brand {name}: heading, nav, stat, carousel, image card, split, hero ink, buttons, palette, stili." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300..700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
@@ -415,7 +415,7 @@ TEMPLATE = """<!doctype html>
   <header class="ds-topbar">
     <div class="ds-topbar__brand">
       {name}<sup>AI+</sup>
-      <span class="ds-topbar__tag">v2 · brand expansion</span>
+      <span class="ds-topbar__tag">v2 · logotel AI+ Solutions</span>
     </div>
     <nav class="ds-topbar__nav">
       <a href="./v2-index.html" class="ds-topbar__cta">↩ V2 ECOSYSTEM</a>
@@ -529,7 +529,7 @@ TEMPLATE = """<!doctype html>
     <!-- BUTTON SYSTEM -->
     <div class="v2-section-title">
       <h2>Button system</h2>
-      <small>brand expansion · 6 stati + icone</small>
+      <small>logotel AI+ Solutions · 6 stati + icone</small>
     </div>
     <section class="ds-glass-card" style="padding:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
       <button class="ds-glass-button ds-glass-button--soft-light">Light soft</button>
@@ -702,7 +702,7 @@ TEMPLATE = """<!doctype html>
     </section>
 
     <footer style="margin-top:2rem;padding:1.5rem 0;color:var(--ds-ink-muted);font-size:0.78rem;border-top:1px solid var(--ds-line);">
-      AI+ Ecosystem · v2 / brand expansion · brand {name} · powered by logotel
+      AI+ Ecosystem · v2 / logotel AI+ Solutions · brand {name} · powered by logotel
     </footer>
 
   </main>

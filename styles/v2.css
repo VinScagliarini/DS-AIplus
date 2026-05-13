@@ -1,5 +1,5 @@
 /* ================================================================
-   AI+ Ecosystem · V2 / Brand Expansion (glassmorphic layer)
+   AI+ Ecosystem · V2 / Logotel AI+ Solutions (glassmorphic layer)
    ----------------------------------------------------------------
    Estende styles/index.css: aggiunge il linguaggio "vetro 3D" che
    nasce dai brandboard 2026 (Creative Studio espanso) e si declina
@@ -525,7 +525,7 @@
 [data-brand="liveai-plus"]     { --brand-shape-rotation:   0deg; }
 
 /* ================================================================
-   V2 PALETTE OVERRIDE — Creative Studio brand expansion
+   V2 PALETTE OVERRIDE — Creative Studio logotel AI+ Solutions
    ----------------------------------------------------------------
    Dati da CREATIVE_STUDIO_BrandBoard.ai: 5 step verticali esatti.
    Applicato a tutta la pagina quando l'<html> ha data-ds-version="2".

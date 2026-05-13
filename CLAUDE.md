@@ -141,7 +141,7 @@ html[data-theme="dark"] {
 Mantieni i gradient hero così come sono (sono già pensati per terminare
 sul brand color saturato e leggono bene su entrambe le superfici).
 
-## V2 / brand expansion (glass + 3D shape)
+## V2 / logotel AI+ Solutions (glass + 3D shape)
 
 Da maggio 2026 il sistema ha una **seconda voce v2** che convive con la v1
 (non la sostituisce). Sorgenti: `Brand direction/brand espanso/CREATIVE_STUDIO_BrandBoard.ai`

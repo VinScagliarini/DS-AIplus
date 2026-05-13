@@ -1,4 +1,4 @@
-# AI+ Ecosystem · V2 / Brand Expansion — guida d'uso
+# AI+ Ecosystem · V2 / Logotel AI+ Solutions — guida d'uso
 
 La **v2** è un'estensione del design system, non una sostituzione.
 La v1 (badge a gradient diagonale 135° su sfondo cream, hero card piatte,
@@ -31,7 +31,7 @@ funzionare.
 2. **3D shape** (`.ds-glass-shape`) — una forma geometrica brand-specific,
    stilizzata in SVG (square, T, hexagon, ring, plus...). Si renderizza
    in `currentColor` = `var(--brand)`, con highlight bianco per evocare il
-   vetro. Per brand expansion fotorealistiche, usa i PNG in
+   vetro. Per logotel AI+ Solutions fotorealistiche, usa i PNG in
    `assets/glass-logos/<slug>.png`.
 3. **Glassmorphic surface** (`.ds-glass-card`, `.ds-glass-module`,
    `.ds-glass-button`, `.ds-glass-pill`) — superfici translucide con

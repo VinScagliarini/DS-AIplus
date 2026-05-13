@@ -13,7 +13,7 @@ MuseoModerno + Roboto, lockup `AI+` e `powered by logotel`).
 
 > **Anteprima**: apri [`index.html`](./index.html) nel browser (home),
 > oppure direttamente [`examples/v2-index.html`](./examples/v2-index.html)
-> per la **v2 / brand expansion** (glass badges, monogrammi, 9 vetrine
+> per la **v2 / logotel AI+ Solutions** (glass badges, monogrammi, 9 vetrine
 > brand complete con style guide).
 >
 > **Online**: una volta abilitato GitHub Pages, le pagine vivono su
@@ -117,7 +117,7 @@ import creativeStudio from "ai-plus-ecosystem-ds/tokens/brands/creative-studio.j
 | **REFRAMING LAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/reframing-lab.md) |
 | **LIVE AI+** | lime | `#BBF0AD` | `#95EC80` | [→](docs/brands/liveai-plus.md) |
 
-## V2 · Brand expansion (2026)
+## V2 · Logotel AI+ Solutions (2026)
 
 Seconda voce del DS, additiva, attivabile con `data-ds-version="2"` e
 `class="brand-<slug>"`. Introduce:
@@ -157,7 +157,7 @@ Ogni push su `main` ridistribuisce automaticamente.
 
 ## Documentazione
 
-- [`docs/usage-v2.md`](docs/usage-v2.md) — guida v2 / brand expansion
+- [`docs/usage-v2.md`](docs/usage-v2.md) — guida v2 / logotel AI+ Solutions
 - [`docs/brands.md`](docs/brands.md) — indice brand + selezione brand
 - [`docs/typography.md`](docs/typography.md) — MuseoModerno + Roboto, type scale
 - [`docs/color.md`](docs/color.md) — neutrali, brand-aware, gradient
