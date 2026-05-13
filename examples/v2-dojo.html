@@ -93,6 +93,111 @@
   }
   .v2-swatch[data-tone="light"]  { color: var(--ds-ink-deep); }
   .v2-swatch[data-tone="dark"]   { color: var(--ds-cream); }
+
+  /* Style guide blocks */
+  .v2-grad {
+    height: 96px; border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    color: var(--ds-ink-deep);
+    font-family: var(--ds-font-mono); font-size: 0.7rem;
+    box-shadow: var(--ds-shadow-card-soft);
+  }
+  .v2-grad b {
+    font-family: var(--ds-font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    display: block;
+  }
+  .v2-grad small { display: block; opacity: 0.65; margin-top: 2px; }
+  .v2-grad--dark { color: var(--ds-cream); }
+
+  .v2-radii {
+    display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;
+  }
+  .v2-radius {
+    width: 5rem; height: 5rem;
+    border: 1.5px solid var(--ds-ink-deep);
+    background: var(--ds-white);
+    display: grid; place-items: center;
+    font-family: var(--ds-font-mono); font-size: 0.65rem;
+    color: var(--ds-ink-deep);
+    text-align: center; line-height: 1.2;
+  }
+  .v2-radius--pill {
+    width: 8rem; height: 2.5rem;
+    border-radius: 9999px;
+  }
+
+  .v2-shadows {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .v2-shadow {
+    width: 6.5rem; height: 4.5rem;
+    background: var(--ds-white);
+    border-radius: 1rem;
+    display: grid; place-items: center;
+    font-family: var(--ds-font-mono); font-size: 0.7rem; color: var(--ds-ink-deep);
+  }
+  .v2-shadow--soft {
+    box-shadow: 0 6px 24px -8px rgba(15,4,24,0.12), 0 2px 6px -2px rgba(15,4,24,0.06);
+  }
+  .v2-shadow--glow {
+    box-shadow: 0 24px 60px -12px var(--brand-glow);
+  }
+
+  .v2-spacing-scale {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; align-items: end;
+  }
+  .v2-spacing-scale > div { text-align: center; }
+  .v2-spacing-scale span {
+    display: block; background: var(--brand-ink-deep);
+    border-radius: 4px; width: 100%;
+  }
+  .v2-spacing-scale small {
+    display: block; margin-top: 4px;
+    font-family: var(--ds-font-mono); font-size: 0.62rem; color: var(--ds-ink-muted);
+  }
+
+  .v2-stat { display: grid; gap: 0.4rem; min-width: 14rem; }
+  .v2-stat__num {
+    font-family: var(--ds-font-display); font-weight: 600;
+    font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1;
+    color: var(--ds-ink-deep);
+  }
+  .v2-stat__num--accent { color: var(--brand); }
+  .v2-stat__lbl {
+    font-family: var(--ds-font-body); font-size: 0.85rem;
+    color: var(--ds-ink-muted); max-width: 26ch; line-height: 1.45;
+  }
+
+  .v2-voice { display: grid; gap: 0.5rem; margin: 0; }
+  .v2-voice > div {
+    display: grid; grid-template-columns: 7rem 1fr; gap: 0.75rem;
+    padding: 0.6rem 0.85rem; background: rgba(255,255,255,0.45);
+    border-radius: 0.75rem;
+    align-items: center;
+  }
+  .v2-voice dt {
+    font-family: var(--ds-font-mono); font-size: 0.7rem;
+    color: var(--ds-ink-muted); text-transform: uppercase;
+    margin: 0;
+  }
+  .v2-voice dd {
+    margin: 0; font-family: var(--ds-font-body); font-size: 0.85rem;
+    color: var(--ds-ink-deep);
+  }
+  .v2-voice__headline {
+    font-family: var(--ds-font-display) !important; font-weight: 600;
+    text-transform: uppercase; letter-spacing: -0.005em;
+    font-size: 0.95rem !important;
+  }
+  .v2-voice__eyebrow {
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--ds-ink-muted) !important; font-size: 0.75rem !important;
+  }
+  .v2-voice__tone { color: var(--ds-ink-muted) !important; font-size: 0.78rem !important; }
 </style>
 </head>
 <body>
@@ -259,6 +364,97 @@
       <div class="v2-swatch" data-tone="dark"  style="background:#181818;">181818</div>
     </section>
 
+    <!-- GRADIENTS -->
+    <div class="v2-section-title">
+      <h2>Gradients</h2>
+      <small>3 valori canonici · brand-aware</small>
+    </div>
+    <section class="v2-deck">
+      <div class="v2-grad" style="background: linear-gradient(135deg, #F7F6F3 0%, #F9E590 100%);">
+        <b>Badge · 135°</b>
+        <small>cream → brand-soft · ratio 1:1</small>
+      </div>
+      <div class="v2-grad" style="background: linear-gradient(160deg, #F7F6F3 0%, #F9E590 55%, #FBD947 100%);">
+        <b>Hero · 160°</b>
+        <small>cream → soft (55%) → primary</small>
+      </div>
+      <div class="v2-grad v2-grad--dark" style="background: linear-gradient(180deg, #33301A 0%, #181818 100%);">
+        <b>Ink card · 180°</b>
+        <small>brand-ink → brand-ink-deep</small>
+      </div>
+    </section>
+
+    <!-- RADII · SHADOWS · SPACING -->
+    <div class="v2-section-title">
+      <h2>Radii · Shadows · Spacing</h2>
+      <small>token geometrici condivisi</small>
+    </div>
+    <section class="v2-deck">
+      <article class="ds-glass-card">
+        <p class="ds-glass-card__eyebrow">Radii</p>
+        <div class="v2-radii">
+          <div class="v2-radius" style="border-radius: 1.25rem;">swatch · 1.25rem</div>
+          <div class="v2-radius" style="border-radius: 1.75rem;">card · 1.75rem</div>
+          <div class="v2-radius v2-radius--pill">pill · 9999px</div>
+        </div>
+      </article>
+      <article class="ds-glass-card">
+        <p class="ds-glass-card__eyebrow">Shadows</p>
+        <div class="v2-shadows">
+          <div class="v2-shadow v2-shadow--soft">card-soft</div>
+          <div class="v2-shadow v2-shadow--glow">card-glow</div>
+        </div>
+        <small style="display:block;margin-top:0.6rem;font-size:0.7rem;color:var(--ds-ink-muted);">due shadow totali · glow usa --brand-glow</small>
+      </article>
+      <article class="ds-glass-card">
+        <p class="ds-glass-card__eyebrow">Spacing scale</p>
+        <div class="v2-spacing-scale">
+          <div><span style="height:4px"></span><small>xs · 4</small></div>
+          <div><span style="height:8px"></span><small>sm · 8</small></div>
+          <div><span style="height:16px"></span><small>md · 16</small></div>
+          <div><span style="height:24px"></span><small>lg · 24</small></div>
+          <div><span style="height:40px"></span><small>xl · 40</small></div>
+          <div><span style="height:64px"></span><small>2xl · 64</small></div>
+          <div><span style="height:96px"></span><small>3xl · 96</small></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- STATS SPECIMEN -->
+    <div class="v2-section-title">
+      <h2>Stats</h2>
+      <small>numero gigante · MuseoModerno · brand-ink-deep</small>
+    </div>
+    <section class="ds-glass-card" style="display:flex;gap:2.5rem;flex-wrap:wrap;align-items:end;">
+      <div class="v2-stat">
+        <div class="v2-stat__num">+50</div>
+        <div class="v2-stat__lbl">varianti creative on-brand in un pomeriggio, pronte per il launch</div>
+      </div>
+      <div class="v2-stat">
+        <div class="v2-stat__num v2-stat__num--accent">3×</div>
+        <div class="v2-stat__lbl">più velocità di produzione vs. il flusso tradizionale</div>
+      </div>
+      <div class="v2-stat">
+        <div class="v2-stat__num">70%</div>
+        <div class="v2-stat__lbl">dei dipendenti non completa i percorsi formativi obbligatori.</div>
+      </div>
+    </section>
+
+    <!-- COPY & VOICE -->
+    <div class="v2-section-title">
+      <h2>Copy & Voice</h2>
+      <small>Italiano · imperativo · tu · zero gergo · zero emoji</small>
+    </div>
+    <section class="ds-glass-card">
+      <dl class="v2-voice">
+        <div><dt>Headline</dt><dd class="v2-voice__headline">Apprendimento continuo. Senza corsi.</dd></div>
+        <div><dt>Eyebrow</dt><dd class="v2-voice__eyebrow">Training continuo · powered by Logotel</dd></div>
+        <div><dt>CTA</dt><dd>Start training · Inizia oggi · Open my dojo</dd></div>
+        <div><dt>Sub</dt><dd>Una piattaforma di micro-learning che si adatta al tuo ruolo, al tuo livello, al tuo tempo. Cinque minuti al giorno bastano.</dd></div>
+        <div><dt>Tone</dt><dd class="v2-voice__tone">Italiano · imperativo · tu · zero gergo · zero emoji</dd></div>
+      </dl>
+    </section>
+
     <!-- STILI ATTIVI -->
     <div class="v2-section-title">
       <h2>Stili attivi · DOJO</h2>
@@ -304,6 +500,7 @@
               <li><code>.ds-glass-stack-card</code></li>
               <li><code>.ds-glass-hero-ink</code></li>
               <li>Buttons <code>--soft-light / default / --brand-fill / --brand-gradient / --outline / --ink / --icon</code></li>
+              <li>Style guide: gradients, radii, shadows, spacing, stats, copy &amp; voice</li>
             </ul>
           </dd>
         </div>
