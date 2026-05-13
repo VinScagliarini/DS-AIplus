@@ -1039,24 +1039,16 @@
                bottom-card, sporge ~28% a destra
    ================================================================ */
 .ds-glass-stack-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 0;                     /* top e bottom incollate */
   position: relative;
-  isolation: isolate;
-  overflow: visible;
   max-width: 42rem;
   margin: 0 auto;
-  padding-bottom: clamp(2rem, 3.5vw, 2.5rem); /* spazio per la metà inferiore del pill che sporge */
+  isolation: isolate;
 }
 .ds-glass-stack-card__top {
-  grid-column: 1 / -1;
-  grid-row: 1;
   position: relative;
   border-radius: var(--ds-radius-card);
   overflow: hidden;
-  aspect-ratio: 2.05 / 1;
+  aspect-ratio: 2.4 / 1;
   background: var(--brand-ink-deep);
 }
 .ds-glass-stack-card__top img {
@@ -1095,70 +1087,6 @@
   line-height: 1.45;
   color: rgba(247, 246, 243, 0.92);
   margin: 0;
-}
-.ds-glass-stack-card__bottom {
-  grid-column: 2 / -1;
-  grid-row: 2;
-  position: relative;
-  margin-top: -2px;          /* overlap minimo per "incollare" alla top */
-  z-index: 2;
-}
-.ds-glass-stack-card__bottom-media {
-  position: relative;
-  border-radius: var(--ds-radius-card);
-  overflow: hidden;          /* clip della foto, MA non del pill che è absolute fuori */
-  aspect-ratio: 2.2 / 1;     /* leggermente più alta → pill al 55% è più presente */
-  background: var(--brand-ink-deep);
-}
-.ds-glass-stack-card__bottom-media img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.ds-glass-stack-card__bottom-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(13,5,15,0.45) 0%, rgba(13,5,15,0.05) 35%, rgba(13,5,15,0.50) 100%);
-}
-.ds-glass-stack-card__pill {
-  position: absolute;
-  /* Pill width naturale (contenuto + padding).
-     Posizionato right: -28% (sporge a destra) + bottom: -25% (metà sotto).
-     Height: 55% della bottom-card. */
-  right: -28%;
-  bottom: -25%;
-  height: 55%;
-  width: max-content;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  border-radius: 9999px;
-  background: var(--brand-ink-deep);
-  color: var(--ds-cream);
-  font-family: var(--ds-font-display);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: clamp(0.78rem, 0.95vw, 0.9rem);
-  text-decoration: none;
-  box-shadow: 0 14px 28px -10px rgba(13,5,15,0.55);
-  padding: 0 1.5rem;
-  white-space: nowrap;
-}
-@media (max-width: 720px) {
-  .ds-glass-stack-card { padding-bottom: 3.5rem; }
-  .ds-glass-stack-card__bottom { grid-column: 1 / -1; }
-  .ds-glass-stack-card__bottom-media { aspect-ratio: 2.5 / 1; }
-  .ds-glass-stack-card__pill {
-    left: 50%;
-    right: auto;
-    bottom: -1.5rem;
-    transform: translateX(-50%);
-    width: max-content;
-  }
 }
 
 /* ================================================================

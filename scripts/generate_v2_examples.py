@@ -493,7 +493,7 @@ TEMPLATE = """<!doctype html>
       </div>
     </div>
 
-    <!-- STACK CARD -->
+    <!-- STACK CARD — top-only (versione semplificata) -->
     <section class="ds-glass-stack-card">
       <div class="ds-glass-stack-card__top">
         <img src="{stack_top_url}" alt="" loading="lazy" />
@@ -501,12 +501,6 @@ TEMPLATE = """<!doctype html>
           <span class="ds-glass-stack-card__caption-eyebrow">{split_eb}</span>
           <p class="ds-glass-stack-card__caption-text">{split_txt}</p>
         </div>
-      </div>
-      <div class="ds-glass-stack-card__bottom">
-        <div class="ds-glass-stack-card__bottom-media">
-          <img src="{stack_bottom_url}" alt="" loading="lazy" />
-        </div>
-        <a class="ds-glass-stack-card__pill" href="#">{split_cta}</a>
       </div>
     </section>
 
