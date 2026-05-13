@@ -1014,6 +1014,127 @@
 }
 
 /* ================================================================
+   STACK CARD — Image #11 (brandboard)
+   Composizione di due foto sovrapposte verticalmente:
+     · top:    foto landscape full-width con caption overlay top-left
+     · bottom: foto landscape offset a destra (~metà larghezza),
+               con pill CTA che sporge oltre il bordo destro.
+   Tra le due card c'è un piccolo gap visibile.
+   ================================================================ */
+.ds-glass-stack-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(0.5rem, 1vw, 0.85rem);
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  padding-right: clamp(2rem, 4vw, 3.5rem); /* spazio per pill che sporge */
+}
+.ds-glass-stack-card__top {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: relative;
+  border-radius: var(--ds-radius-card);
+  overflow: hidden;
+  aspect-ratio: 2.4 / 1;
+  background: var(--brand-ink-deep);
+}
+.ds-glass-stack-card__top img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ds-glass-stack-card__top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(13,5,15,0.70) 0%, rgba(13,5,15,0.25) 45%, transparent 70%);
+}
+.ds-glass-stack-card__caption {
+  position: absolute;
+  top: clamp(1rem, 2vw, 1.75rem);
+  left: clamp(1rem, 2vw, 1.75rem);
+  z-index: 1;
+  max-width: 22ch;
+}
+.ds-glass-stack-card__caption-eyebrow {
+  display: block;
+  font-family: var(--ds-font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--ds-cream);
+  margin-bottom: 0.45rem;
+}
+.ds-glass-stack-card__caption-text {
+  font-family: var(--ds-font-body);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(247, 246, 243, 0.92);
+  margin: 0;
+}
+.ds-glass-stack-card__bottom {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  position: relative;
+  border-radius: var(--ds-radius-card);
+  overflow: hidden;
+  aspect-ratio: 3.1 / 1;
+  background: var(--brand-ink-deep);
+  z-index: 2;
+}
+.ds-glass-stack-card__bottom img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ds-glass-stack-card__bottom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(13,5,15,0.55) 0%, rgba(13,5,15,0.10) 35%, rgba(13,5,15,0.45) 100%);
+}
+.ds-glass-stack-card__pill {
+  position: absolute;
+  right: clamp(-0.5rem, 0vw, 0.5rem);
+  top: 50%;
+  transform: translate(15%, -50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  min-width: 18rem;
+  border-radius: var(--ds-radius-pill);
+  background: var(--brand-ink-deep);
+  color: var(--ds-cream);
+  font-family: var(--ds-font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 16px 36px -10px rgba(13,5,15,0.55);
+}
+@media (max-width: 720px) {
+  .ds-glass-stack-card { padding-right: 0; }
+  .ds-glass-stack-card__bottom { grid-column: 1 / -1; aspect-ratio: 2.2 / 1; }
+  .ds-glass-stack-card__pill {
+    position: relative;
+    right: auto; top: auto;
+    transform: none;
+    margin: 0.75rem auto 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ================================================================
    HEADING CARD — Image #8
    Card landscape: gradient brand-soft → bg-start, wordmark display
    gigante a sinistra + headline body a destra.

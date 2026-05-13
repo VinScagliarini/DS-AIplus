@@ -18,7 +18,8 @@ BRANDS_INFO = {b["slug"]: b for b in INDEX["brands"]}
 # Pexels URLs (statici, CC0). Sostituibili per brand se serve un mood diverso.
 PEXELS_DEFAULT = {
     "image_card":   "https://images.pexels.com/photos/3585047/pexels-photo-3585047.jpeg?auto=compress&cs=tinysrgb&w=900",
-    "split_card":   "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "stack_top":    "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    "stack_bottom": "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1400",
     "hero_ink":     "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=1200",
 }
 
@@ -387,17 +388,19 @@ TEMPLATE = """<!doctype html>
       </div>
     </div>
 
-    <!-- SPLIT CARD -->
-    <section class="ds-glass-split-card">
-      <div class="ds-glass-split-card__media">
-        <img src="{split_url}" alt="" loading="lazy" />
-        <div class="ds-glass-split-card__caption">
-          <span class="ds-glass-split-card__caption-eyebrow">{split_eb}</span>
-          <p class="ds-glass-split-card__caption-text">{split_txt}</p>
+    <!-- STACK CARD -->
+    <section class="ds-glass-stack-card">
+      <div class="ds-glass-stack-card__top">
+        <img src="{stack_top_url}" alt="" loading="lazy" />
+        <div class="ds-glass-stack-card__caption">
+          <span class="ds-glass-stack-card__caption-eyebrow">{split_eb}</span>
+          <p class="ds-glass-stack-card__caption-text">{split_txt}</p>
         </div>
       </div>
-      <div></div>
-      <a class="ds-glass-split-card__pill" href="#">{split_cta}</a>
+      <div class="ds-glass-stack-card__bottom">
+        <img src="{stack_bottom_url}" alt="" loading="lazy" />
+      </div>
+      <a class="ds-glass-stack-card__pill" href="#">{split_cta}</a>
     </section>
 
     <!-- HERO INK -->
@@ -492,7 +495,7 @@ TEMPLATE = """<!doctype html>
               <li><code>.ds-glass-stat-card</code></li>
               <li><code>.ds-glass-carousel-card</code></li>
               <li><code>.ds-glass-image-card</code></li>
-              <li><code>.ds-glass-split-card</code></li>
+              <li><code>.ds-glass-stack-card</code></li>
               <li><code>.ds-glass-hero-ink</code></li>
               <li>Buttons <code>--soft-light / default / --brand-fill / --brand-gradient / --outline / --ink / --icon</code></li>
             </ul>
@@ -580,7 +583,8 @@ def render(slug: str) -> str:
         hero_sub=c["hero_sub"],
         hero_cta=c["hero_cta"],
         img_url=PEXELS_DEFAULT["image_card"],
-        split_url=PEXELS_DEFAULT["split_card"],
+        stack_top_url=PEXELS_DEFAULT["stack_top"],
+        stack_bottom_url=PEXELS_DEFAULT["stack_bottom"],
         hero_url=PEXELS_DEFAULT["hero_ink"],
         hex_bg_start=pal["bg_start"],   hex_bg_start_label=pal["bg_start"].upper().lstrip("#"),
         hex_soft=pal["soft"],           hex_soft_label=pal["soft"].upper().lstrip("#"),
