@@ -1025,11 +1025,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: clamp(0.5rem, 1vw, 0.85rem);
+  gap: 0.4rem;
   position: relative;
   isolation: isolate;
   overflow: visible;
-  padding-right: clamp(2rem, 4vw, 3.5rem); /* spazio per pill che sporge */
+  max-width: 52rem;          /* blocco compatto, no full-shell */
+  margin: 0 auto;            /* centrato nel container */
+  padding-right: clamp(2.5rem, 4vw, 3.5rem); /* spazio per pill che sporge */
 }
 .ds-glass-stack-card__top {
   grid-column: 1 / -1;
@@ -1037,7 +1039,7 @@
   position: relative;
   border-radius: var(--ds-radius-card);
   overflow: hidden;
-  aspect-ratio: 2.4 / 1;
+  aspect-ratio: 2.55 / 1;
   background: var(--brand-ink-deep);
 }
 .ds-glass-stack-card__top img {
@@ -1083,7 +1085,7 @@
   position: relative;
   border-radius: var(--ds-radius-card);
   overflow: hidden;
-  aspect-ratio: 3.1 / 1;
+  aspect-ratio: 2 / 1;       /* meno slim, più "card-like" come in brandboard */
   background: var(--brand-ink-deep);
   z-index: 2;
 }
@@ -1101,15 +1103,15 @@
 }
 .ds-glass-stack-card__pill {
   position: absolute;
-  right: clamp(-0.5rem, 0vw, 0.5rem);
-  top: 50%;
-  transform: translate(15%, -50%);
+  right: 0;
+  bottom: clamp(0.5rem, 1.5vw, 1rem);
+  transform: translateX(35%);       /* sporge oltre il bordo destro */
   z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
-  min-width: 18rem;
+  padding: 0.85rem 1.6rem;
+  min-width: 14rem;
   border-radius: var(--ds-radius-pill);
   background: var(--brand-ink-deep);
   color: var(--ds-cream);
@@ -1117,7 +1119,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-decoration: none;
   box-shadow: 0 16px 36px -10px rgba(13,5,15,0.55);
 }
