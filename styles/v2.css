@@ -120,7 +120,7 @@
 }
 .ds-glass-badge__wordmark {
   position: relative;
-  align-self: end;
+  place-self: center start;     /* wordmark centrato vertical, allineato a sinistra */
   font-family: var(--ds-font-display);
   font-weight: var(--ds-fw-semibold);
   font-size: clamp(1.2rem, 2.2vw, 1.85rem);
@@ -730,8 +730,20 @@
   margin-bottom: 1.25rem;
 }
 .ds-glass-hero-ink__symbol {
-  width: 2.25rem; height: 2.25rem;
-  display: grid; place-items: center;
+  width: 3rem; height: 3rem;
+  border-radius: 0.55rem;
+  border: 1.5px solid var(--ds-cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+  font-family: var(--ds-font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.05em;
+  color: var(--ds-cream);
+  text-transform: uppercase;
+  line-height: 1;
 }
 .ds-glass-hero-ink__symbol svg { width:100%; height:100%; color: var(--ds-cream); }
 .ds-glass-hero-ink__wordmark {
@@ -764,7 +776,10 @@
   align-self: stretch;
   border-radius: 0.75rem;
   overflow: hidden;
-  margin-right: clamp(-2rem, -3vw, -1rem);
+  /* Bleed aggressivo sul bordo destro: il mockup esce dalla card */
+  margin-right: clamp(-4.5rem, -6vw, -3rem);
+  margin-top: clamp(-1.5rem, -2vw, -1rem);
+  margin-bottom: clamp(-1.5rem, -2vw, -1rem);
 }
 .ds-glass-hero-ink__media img {
   display: block;

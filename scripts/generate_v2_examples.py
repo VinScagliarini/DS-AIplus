@@ -508,9 +508,7 @@ TEMPLATE = """<!doctype html>
     <section class="ds-glass-hero-ink">
       <div>
         <div class="ds-glass-hero-ink__lockup">
-          <div class="ds-glass-hero-ink__symbol" aria-hidden="true">
-            <svg viewBox="0 0 240 240"><use href="../assets/shapes/sprite.svg#shape-{slug}"/></svg>
-          </div>
+          <div class="ds-glass-hero-ink__symbol" aria-hidden="true">{monogram}</div>
           <span class="ds-glass-hero-ink__wordmark">{name_compact}</span>
         </div>
         <h2 class="ds-glass-hero-ink__title">{hero_t}</h2>
@@ -720,6 +718,19 @@ SHAPE_KIND = {
     "liveai-plus":     "plus / cross",
 }
 
+# Monogram 2-char visualizzato come emblem nel hero-ink (image #27)
+MONOGRAM = {
+    "creative-studio": "TI",   # come da brandboard image #27
+    "jump":            "JM",
+    "hive":            "HI",
+    "willsell":        "WS",
+    "dojo":            "DJ",
+    "maindset":        "MS",
+    "leadai":          "LA",
+    "changelab":       "CL",
+    "liveai-plus":     "L+",
+}
+
 # Map brand → relative tone (light = dark text on it, dark = light text)
 SWATCH_TONE = {
     # given indices [bg_start, soft, primary, ink, ink_deep]
@@ -795,6 +806,7 @@ def render(slug: str) -> str:
         hex_ink=pal["ink"],             hex_ink_label=pal["ink"].upper().lstrip("#"),
         hex_ink_deep=pal["ink_deep"],   hex_ink_deep_label=pal["ink_deep"].upper().lstrip("#"),
         shape_kind=SHAPE_KIND[slug],
+        monogram=MONOGRAM[slug],
         eco_links=build_eco_links(slug),
     )
 
