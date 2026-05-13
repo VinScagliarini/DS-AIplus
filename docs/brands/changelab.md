@@ -1,4 +1,4 @@
-# CHANGELAB
+# REFRAMING LAB
 
 > Cambiamento progettato come un esperimento.
 
@@ -60,7 +60,7 @@ background: linear-gradient(180deg, #0F1B3A 0%, #080F22 100%);
 - `tokens/brands/changelab.json` — tutti i token in formato design-tokens
 - `styles/brands/changelab.css` — custom property pronte all'uso
 
-## Quando usare CHANGELAB
+## Quando usare REFRAMING LAB
 
 `Cambiamento progettato come un esperimento.` — questo brand serve i casi d'uso che richiedono questo
 posizionamento specifico. Per tutto il resto dell'ecosistema, vedi [`../brands.md`](../brands.md).

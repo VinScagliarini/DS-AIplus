@@ -132,7 +132,7 @@ COPY = {
         "tag": "Change as Experiment",
         "eyebrow": "CHANGE AS EXPERIMENT · POWERED BY LOGOTEL",
         "title": "Cambiamento progettato come un esperimento.",
-        "sub":   "CHANGELAB porta nel cambiamento organizzativo il rigore della sperimentazione: ipotesi, prototipi, evidenza.",
+        "sub":   "REFRAMING LAB porta nel cambiamento organizzativo il rigore della sperimentazione: ipotesi, prototipi, evidenza.",
         "pills": [("cyan", "Live"), ("cream", "3 lab attivi"), ("lime", "Iteration 12")],
         "big_card": ("CL0", "LAB BOARD", "Da idea a ipotesi a prototipo. Il backlog del cambiamento."),
         "modules": [
@@ -142,7 +142,7 @@ COPY = {
             ("CL4", "Decision Doc", "Dalla ipotesi alla decisione."),
             ("CL5", "Cycle Review", "Il rituale del lab."),
         ],
-        "stat": ("12 sett.", "il ciclo medio per validare una nuova capability con CHANGELAB"),
+        "stat": ("12 sett.", "il ciclo medio per validare una nuova capability con REFRAMING LAB"),
     },
     "liveai-plus": {
         "tag": "Live Experience",

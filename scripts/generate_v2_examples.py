@@ -165,11 +165,11 @@ CONTENT = {
         "hero_cta":  "Start leading",
     },
     "changelab": {
-        "wordmark":  "CHANGE<br/>LAB",
+        "wordmark":  "REFRAMING<br/>LAB",
         "tag":       "Change ops",
         "heading_h": "Il cambiamento, come un laboratorio.",
         "carousel_title": "ESPERIMENTI<br/>CONTINUI.<br/>RISULTATI<br/>MISURABILI.",
-        "carousel_body":  "CHANGELAB orchestra le iniziative di trasformazione come un laboratorio: ipotesi, esperimenti, evidenze, scale-up.",
+        "carousel_body":  "REFRAMING LAB orchestra le iniziative di trasformazione come un laboratorio: ipotesi, esperimenti, evidenze, scale-up.",
         "stat_n":    "73%",
         "stat_lbl":  "delle iniziative di trasformazione non ha un metodo di verifica strutturato.",
         "stat_src":  "MIT Sloan 2024",
@@ -728,7 +728,7 @@ MONOGRAM = {
     "dojo":            "DJ",
     "maindset":        "MS",
     "leadai":          "LA",
-    "changelab":       "CL",
+    "changelab":       "RL",
     "liveai-plus":     "L+",
 }
 

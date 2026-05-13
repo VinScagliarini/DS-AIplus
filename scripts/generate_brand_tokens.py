@@ -87,7 +87,7 @@ BRANDS = {
         "ink_deep":"#181818",
     },
     "changelab": {
-        "name": "CHANGELAB",
+        "name": "REFRAMING LAB",
         "tagline": "Cambiamento progettato come un esperimento.",
         "hue_name": "blue",
         "soft":   "#95B5FA",

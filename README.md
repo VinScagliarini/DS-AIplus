@@ -5,7 +5,7 @@ estratto dal pacchetto sorgente `AI+_ECOSYSTEM.ai` (Adobe Illustrator) e
 trasformato in token, CSS e componenti pronti all'uso.
 
 Nove brand verticali — **JUMP, HIVE, WILLSELL, DOJO, CREATIVE STUDIO,
-MAINDSET, LEADAI, CHANGELAB, LIVE AI+** — costruiti sulla stessa
+MAINDSET, LEADAI, REFRAMING LAB, LIVE AI+** — costruiti sulla stessa
 grammatica visiva (badge a gradient diagonale 135°, tipografia
 MuseoModerno + Roboto, lockup `AI+` e `powered by logotel`).
 
@@ -114,7 +114,7 @@ import creativeStudio from "ai-plus-ecosystem-ds/tokens/brands/creative-studio.j
 | **CREATIVE STUDIO** | magenta | `#F0BEF7` | `#D464F0` | [→](docs/brands/creative-studio.md) |
 | **MAINDSET** | violet | `#BFB8FA` | `#968CFF` | [→](docs/brands/maindset.md) |
 | **LEADAI** | coral | `#F4ABA6` | `#F2746F` | [→](docs/brands/leadai.md) |
-| **CHANGELAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/changelab.md) |
+| **REFRAMING LAB** | blue | `#95B5FA` | `#568BFF` | [→](docs/brands/changelab.md) |
 | **LIVE AI+** | lime | `#BBF0AD` | `#95EC80` | [→](docs/brands/liveai-plus.md) |
 
 ## V2 · Brand expansion (2026)
